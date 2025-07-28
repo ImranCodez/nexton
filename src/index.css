@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@utility container {
+  margin-inline: auto;
+}
+/* ............varibales...... */
+@theme {
+  --color-primary: #4b5563;
+}
+/* .................font..... */
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+}
