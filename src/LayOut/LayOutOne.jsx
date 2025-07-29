@@ -5,13 +5,15 @@ import ResponsiveNav from '../components/ResponsiveNav'
 
 
 
+
 const layOutOne = () => {
   return (
     <>
     
 
-    <ResponsiveNav/>
+
     <Navbar/>
+    <ResponsiveNav/>
     <Outlet/>
     
     </>
