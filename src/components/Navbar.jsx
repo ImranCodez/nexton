@@ -26,7 +26,6 @@ const Navbar = () => {
            <div className="buttons">
             <button  className='text[24px] text-primary font-poppins mr-[10px]'><RiUserLine/></button>
             <button className='text[24px] text-primary font-poppins  relative'><PiShoppingCartSimple/>
-            
             <span className='text-[#fff] w-[20px] h-[20px] bg-[#0EA5E9] rounded-full text-[12px] flex items-center justify-center absolute left-[8px] top-[-12px] '>3</span>
             </button>
            </div>
