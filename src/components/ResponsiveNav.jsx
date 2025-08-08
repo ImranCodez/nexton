@@ -14,7 +14,7 @@ const ResponsiveNav = () => {
 
     
     <>
-      <nav id="resonse-nav" className="w-full py-[20px] bg-[#fff]">
+      <nav id="resonse-nav" className="w-full py-[20px] lg:hidden bg-[#fff]">
         <div className="container">
           <div className="nav-row  flex justify-between ">
             <div className="navlogo">

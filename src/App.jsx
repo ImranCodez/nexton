@@ -5,6 +5,8 @@ import { Route } from "react-router";
 import LayOutOne from "./LayOut/layOutOne";
 import Home from "./pages/Home";
 import About from "./pages/about";
+import Longing from "./pages/Longing";
+import Resis from "./pages/Resis";
 
 
 
@@ -19,6 +21,8 @@ const App = () => {
         <Route  path="/" element={<LayOutOne />}>
           <Route path="/About" element={<About/>}/>
           <Route index element={<Home />} />
+          <Route path="/Login" element={<Longing />} />
+          <Route path="/Register" element={<Resis />} />
         </Route>
       </Route>
     )
