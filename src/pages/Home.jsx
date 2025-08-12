@@ -4,6 +4,7 @@ import Service from '../components/service'
 import Explore from '../components/Explore'
 import Reco from '../components/Reco'
 import Best_seller from '../components/Best_seller'
+import NewColletion from '../components/NewColletion'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
     <Explore/>
     <Reco/>
     <Best_seller/>
+    <NewColletion/>
     
     </>
   )

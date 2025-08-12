@@ -12,10 +12,11 @@ const Banner = () => {
           <h1 className='text-[#111827] font-poppins text-[30px] font-semibold leading-[72px] w-full my-6 mt-2 mb-10 lg:text-[63px] lg:w-[632px]'>Exclusive collectionfor everyone</h1>
           <Link className='py-3 px-6 flex mt-[24px]  mb-[168px] lg:px-[36px]  items-center justify-center gap-2 rounded-[100px] bg-[#111827] text-[#fff] font-poppins text-[14px]  lg:text-[16px]  font-medium ruonded-[100px] w-fit hover:scale-[1.1] duration-[.4s]' to={'/'}>Explore now <CiSearch className='text-xl' /> </Link>            
         </div>
+        
       </div>
      </section>
-    
-    
+       
+     
     </>
   )
 }
