@@ -3,9 +3,9 @@ import { Link } from "react-router";
 
 const cart = (cartimg ,Cart,prodcutNm,price,Totall,Amount,CheckOut) => {
   return (
-
+         
     <div className={`relative`}>
-      <div className="w-full h-screen absolute bg-[#00000048] left-0 top-[20%]"></div>
+      <div className="w-full h-screen absolute bg-[#00000048] left-0  top-0"></div>
       <div className="w-[500px] h-screen absolute bg-white top-0 right-0 p-3">
         <h1 className="text-3xl font-semibold font-poppins text-primary">
         {  Cart}

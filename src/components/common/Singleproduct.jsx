@@ -9,9 +9,9 @@ const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating}) => {
     
     <div className='w-[309px] h-[448px]'>
      <div className='w-full h-[348px] bg-white rounded-[16px] relative'>
-      <div className='absolute top-6 right-7'>
-         <span className='text-black font-bold absolute mt-[-27px] hover:mt-[-20px]'>Shop</span>
-         <BsCart4 className='w-[30px] h-[30px] hover:bg-primary duration-[.4s] font-medium text-[30px]  hover:text-[aqua] rounded-2xl hover:scale-[1.1]' />
+      <div className=' group absolute top-6 right-7'>
+         <span className='text-[#00000000] font-bold absolute mt-[-27px] group-hover:mt-[-60px] w-[60px] h-[40px] flex items-center justify-center rounded-sm group-hover:bg-primary group-hover:text-[aqua]'>Shop</span>
+         <BsCart4 className='w-[30px] h-[30px] hover:bg-primary duration-[.4s] font-medium text-[30px]   hover:text-[aqua] rounded-2xl hover:scale-[1.1]' />
       </div>
         <img src={proimg} alt="product iamge" />
      </div>

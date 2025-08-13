@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/about";
 import Longing from "./pages/Longing";
 import Resis from "./pages/Resis";
+import Recomondation from "./pages/Recomondation";
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="/Login" element={<Longing />} />
           <Route path="/Register" element={<Resis />} />
+            <Route path="/Recomondation" element={<Recomondation />} />
         </Route>
       </Route>
     )
