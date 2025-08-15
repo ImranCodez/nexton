@@ -44,7 +44,7 @@ const Footer = () => {
                  <Link className='text-[18px] text-primary font-normal font-poppins mt-3'>Upgrade Guide</Link>
                   <Link className='text-[18px] text-primary font-normal font-poppins mt-3'>Browser Support</Link>
                    <Link className='text-[18px] text-primary font-normal font-poppins mt-3'>Dark Mode</Link>
-                  
+                      
             </div>
              <div  className='flex flex-col'>
                 <h2 className='text-[18px] text-secound font-semibold font-poppins'>Explore</h2>
