@@ -3,7 +3,7 @@
   import { CiSearch } from "react-icons/ci";
   import { RiUserLine } from "react-icons/ri";
   import { PiShoppingCartSimple } from "react-icons/pi";
-  import Cart from './cart';
+  import Cart from './Cart';
 import { Link } from 'react-router';
 import { FaArrowDown } from "react-icons/fa";
 
@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <>
-    <nav id='Main_nav' className='py-[-27px] bg-[#F8F8F8] w-full h-[52px] hidden lg:block'>
+    <nav id='Main_nav' className='py-[-27px] bg-[#f8f8f8a1] w-full h-[52px] hidden lg:block fixed top-0 left-0'>
 
       <div className="container ">
         <div className="nav_row  flex justify-between items-center">
@@ -41,24 +41,43 @@ const Navbar = () => {
       </div>
           
     </nav>
-
+{/* .......................add to cart er part.............. */}
     
     <div className={`top-[20%] duration-[.3s] w-full fixed ${showcart? 'right-[-2000px]' : 'right-0'}`}>
       <Cart />
     </div>
 
-    <div className={`flex items-center justify-center absolute top-[10%] right-3 ${showAccount? 'hidden' : 'visible'}`}>
+        {/* ................Longing and resistration part............ */}
+    <div className={`flex items-center justify-center   top-[10%] right-3 ${showAccount? 'hidden' : 'visible w-full fixed h-screen bg-[#0000003d]'}`}>
        
-       <div className='bg-[#00000046]  border-1 border-black w-[600px] h-[700px] flex items-center justify-center flex-col gap-[20px] rounded-2xl '>
-           <div className='bg-white w-[260px] h-[3px] inline-block mr-[40px] mt-[50px] absolute top-[18%]'></div>
-            <div className='bg-white w-[260px] h-[3px] inline-block ml-[15px] absolute mt-[20px]  top-[18%]'></div>
-        <div className='flex justify-center items-center flex-col gap-5'>
-          <h1 className='text-white text-3xl font-semibold font-poppins  top-[20%] absolute italic w-[200px] h-[44px] rounded-sm flex items-center justify-center tracking-[20px]'>welcome</h1>
-        
-        </div>
+       <div className='bg-[#0000]  w-[660px] h-[440px] flex items-center justify-between gap-[20px] rounded-4xl '>
+                  
 
-         <Link className='w-full h-[50px] bg-secound text-white flex items-center justify-center rounded-2xl hover:bg-white hover:text-secound duration-[.4s]'  onClick={()=>setShowAccount(!showAccount)} to={'/Login'}>Login</Link>
-        <Link className='w-full h-[50px]  bg-secound text-white flex items-center justify-center rounded-2xl hover:bg-white hover:text-secound duration-[.4s]'  onClick={()=>setShowAccount(!showAccount)} to={'/Register'}>Registration</Link>
+     <div className='w-[48%] h-[440px] bg-primary border-2 flex justify-center items-center flex-col hover:scale-[1.1] duration-[.4s] gap-6 rounded-4xl'>
+              <h1 className='text-white text-4xl font-bold font-poppins'>Welcomne!</h1>
+                <p className='text-[14px] text-white font-medium font-poppins'>Create an acoount if you are new here </p>
+
+                    <Link className='w-full h-[50px]  border-white border-2  bg-secound text-white flex items-center justify-center rounded-2xl hover:bg-white hover:text-secound duration-[.4s]'  onClick={()=>setShowAccount(!showAccount)} to={'/Register'}>Sign Up</Link>
+
+             </div>
+
+           <div className='w-[48%] h-[440px] bg-primary border-2 flex items-center justify-center hover:scale-[1.1] duration-[.4s] flex-col gap-7 rounded-4xl'>
+            <h1 className='text-white text-4xl font-bold font-poppins'>Welcome!</h1>
+            <p className='w-[220px] text-white text-[14px]'>Login if already have a account.Unlock your New journey</p>
+        
+         <Link className='w-full h-[50px] bg-secound text-white flex items-center border-white border-2 justify-center rounded-2xl hover:bg-white hover:text-secound duration-[.4s]'  onClick={()=>setShowAccount(!showAccount)} to={'/Login'}>Login</Link>
+                <div className='flex justify-between items-center gap-3'>
+                  <span className='w-[100px] h-[3px] rounded-4xl bg-secound inline'></span> <h2 className='text-white'>OR</h2> <span className='w-[100px] inline h-[3px] rounded-3xl bg-secound'></span>
+                </div>
+           
+           <div className="inputitems flex justify-center flex-col">
+           <input placeholder='Loging with google' className='w-[250px] border-3  bg-white rounded-4xl h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
+            <input placeholder='Loging with Facebook' className='w-[250px] border-3  bg-white rounded-4xl h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
+            <input placeholder='Loging with github' className='w-[250px] border-3  bg-white rounded-4xl h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
+           </div>
+
+           </div>
+             
       </div>
     </div>
     </>
