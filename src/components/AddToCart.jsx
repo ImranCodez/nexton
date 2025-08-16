@@ -1,15 +1,21 @@
 import React from "react";
 import { Link } from "react-router";
 
-const cart = (cartimg ,Cart,prodcutNm,price,Totall,Amount,CheckOut) => {
+const AddToCart = ({closeCart}) => {
   return (
 
     <div className={`relative`}>
-      <div className="w-full h-screen absolute bg-[#00000048] left-0 top-[20%]"></div>
+      {/* ..............shadow div................. */}
+      <div onClick={closeCart} className={`w-full h-screen  bg-[#64565631] left-0 top-[0%] fixed`}></div>
       <div className="w-[500px] h-screen absolute bg-white top-0 right-0 p-3">
-        <h1 className="text-3xl font-semibold font-poppins text-primary">
-        {  Cart}
+         {/* ...........add to Cart header part...... */}
+       <div className="flex justify-between items-center mb-10">
+          <h1 className="text-3xl font-semibold font-poppins text-primary">
+        {  Cart}efvhdovkn
         </h1>
+             <div>plgkelpgkmlm,</div>
+       </div>
+         {/* .............................cart items........................ */}
         <div className="Allproducts flex flex-col mt-[20px] w-full h-[600px] overflow-y-scroll">
           {/* .............single product */}
           <div className="productimg_Name flex justify-between w-full">
@@ -95,4 +101,4 @@ const cart = (cartimg ,Cart,prodcutNm,price,Totall,Amount,CheckOut) => {
   );
 };
 
-export default cart;
+export default AddToCart;

@@ -53,8 +53,7 @@ console.log(product2)
           }
           </div>
           <div className="flex justify-center mt-10">
-            <Link to={'Recomondation'}  onClick={()=>setproduct2(!product2)} className="p-4 bg-secound z-[-20] text-white text-xlm rounded-sm hover:bg-[aqua] hover:text-secound duration-75 scale-[1.07] " >See More</Link>
-          </div>
+          <Link to={'Recomondation'}  className="py-[20px] px-[22px] bg-secound rounded-sm flex text-white text-xl hover:bg-[aqua] duration-[.4s] scale-[1.07]  hover:text-[#000]" >See More</Link>          </div>
             
         </div>
       </section>

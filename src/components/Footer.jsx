@@ -39,7 +39,7 @@ const Footer = () => {
                   
             </div>
              <div  className='flex flex-col'>
-                <h2 className='text-[18px] text-secound font-semibold font-poppins   '>Getting started</h2>
+                <h2 className='text-[18px] text-secound font-semibold font-poppins '>Getting started</h2>
                 <Link className='mt-[20px] text-[18px] text-primary font-normal font-poppins'>Release Notes</Link>
                  <Link className='text-[18px] text-primary font-normal font-poppins mt-3'>Upgrade Guide</Link>
                   <Link className='text-[18px] text-primary font-normal font-poppins mt-3'>Browser Support</Link>
