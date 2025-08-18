@@ -12,27 +12,27 @@ const Footer = () => {
    <section id='Footer' className=' w-full h-[414px] bg-white'>
 
        <div className="container">
-        <div className='flex  justify-around items-center py-[60px] px-[120px]'>
+        <div className='flex  justify-around items-center  py-[60px]'>
             <div  className='flex flex-col'>
                 <div className='text-[15px] font-semibold font-poppins ml-'>
                  <img src={logo} className='' alt="footer-logo" />
                 </div>
          
-                <div className='flex gap-2 w-[200px] items-center justify-center mt-[20px]'>
+                <div className='flex gap-2 w-[200px] items-center mt-[20px]'>
                     <div><FaFacebook className='text-blue-700 '/></div>
                     <h2 className=' text-[18px] text-primary font-normal font-poppins'>Facebook</h2>
                 </div>
-                <div className='flex gap-2 w-[200px] items-center justify-center mt-[20px]'>
+                <div className='flex gap-2 w-[200px] items-center  mt-[20px]'>
                 <IoLogoYoutube className='text-red-600'/>
                 <Link className='text-[18px] text-primary font-normal font-poppins '> Yuotube</Link>
 
                 </div>
-                 <div className='flex gap-2 w-[200px] items-center justify-center mt-[20px]'>
+                 <div className='flex gap-2 w-[200px] items-center  mt-[20px]'>
                   <FaTelegram className='text-blue-400'/>
                     <Link className='text-[18px] text-primary font-normal font-poppins'> Telegram</Link>
                   </div>
                  
-                  <div className='flex gap-3 w-[200px] items-center justify-center mt-[20px]'>
+                  <div className='flex gap-3 w-[200px] items-center  mt-[20px]'>
                   <FaTwitter className='text-blue-400'/>
                     <Link className='text-[18px] text-primary font-normal font-poppins'> Twitter</Link>
                   </div>

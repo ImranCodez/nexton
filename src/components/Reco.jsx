@@ -34,7 +34,7 @@ const Reco = () => {
   // }, []);
 
   // console.log(product);
-console.log(product2)
+
   return (
     <>
       <section id="Reco" className="mt-[88px]">
@@ -53,7 +53,7 @@ console.log(product2)
           }
           </div>
           <div className="flex justify-center mt-10">
-          <Link to={'Recomondation'}  className="py-[20px] px-[22px] bg-secound rounded-sm flex text-white text-xl hover:bg-[aqua] duration-[.4s] scale-[1.07]  hover:text-[#000]" >See More</Link>          </div>
+          <Link to={'Recomondation'}  className="py-[8px] px-[10px] rounded-sm flex text-secound text-base  bg-amber-700 hover:bg-primary duration-[.4s] scale-[1.07]  hover:text-[#fff]" >See More...</Link>          </div>
             
         </div>
       </section>

@@ -1,18 +1,18 @@
 import React from 'react'
 import { TiStarFullOutline } from "react-icons/ti";
-import { BsCart4 } from "react-icons/bs";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
 
 
 const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating}) => {
   return (
     <>
     
-    <div className='w-[309px] h-[448px] '>
+    <div className='w-[309px] h-[448px] relative'>
+     <div className='absolute top-[20px] right-[20px]  group duration-[.3s] text-2xl flex flex-col items-center'>
+      <div className='mt-[-27px] absolute top-0 right-0 duration-[.3s] w-[90px] h-[40px] bg-[#000] text-[#fff] rounded-[5px] invisible group-hover:visible flex justify-center items-center text-base group-hover:mt-[-50px]'>shop</div>
+      <HiOutlineShoppingBag className='  w-[33px]  text-[10px] h-[28px]  rounded-[4px] bg-amber-700 group-hover:bg-primary group-hover:text-[#fff]' />
+     </div>
      <div className='w-full h-[348px] bg-white rounded-[16px] relative z-[-10]'>
-      <div className='  absolute top-6 right-7 '>
-         <span className='text-[#00000000] font-bold absolute mt-[-27px] group-hover:mt-[-60px] w-[60px] h-[40px] flex items-center justify-center rounded-sm group-hover:bg-primary group-hover:text-[aqua]'>Shop</span>
-         <BsCart4  className='w-[30px] h-[30px] hover:bg-primary duration-[.4s] font-medium text-[30px]  hover:text-[aqua] rounded-2xl hover:scale-[1.1]'  />
-      </div>
         <img src={proimg} alt="product iamge" />
      </div>
      <div className="productext">

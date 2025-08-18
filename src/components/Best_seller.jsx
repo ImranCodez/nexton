@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Single_seller from './common/Single_seller'
 import axios from 'axios'
+import { Link } from 'react-router'
 
 const Best_seller = () => {
 
@@ -30,9 +31,10 @@ const Best_seller = () => {
           }
        </div>
           
-          
-          
-       
+          <div className='flex justify-center items-center mt-[30px]'>
+      <Link className='py-[10px] px-[12px] bg-secound text-base text-[#fff] hover:bg-primary rounded-[4px] '>See More....</Link>
+
+          </div>
 
        </div>
 

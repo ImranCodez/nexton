@@ -1,26 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router";
+import { IoMdClose } from "react-icons/io";
+import { TiShoppingCart } from "react-icons/ti";
 
-const AddToCart = ({closeCart}) => {
 
 
-const handle =()=>{
-   
-    console.log(' hello miss')
+const AddToCart = ({closeCart,cartimg,prodcutNm,price,Totall,Amount,Cart,CheckOut}) => {
+
+const [close,setclose] =useState([])
+const handleback =()=>{
+   setclose(!close)
 }
-
+console.log(close)
   return (
 
     <div className={`relative`}>
       {/* ..............shadow div................. */}
-      <div onClick={handle} className={`w-full h-screen  bg-[#64565631] left-0 top-[0%] fixed`}></div>
-      <div className="w-[500px] h-screen absolute bg-white top-0 right-0 p-3">
+      <div onClick={closeCart} className={`w-full h-screen   bg-[#00000080] top-0 left-0  fixed`}></div>
+
+      <div className="w-[500px] h-screen fixed bg-white top-0 right-0 p-3">
          {/* ...........add to Cart header part...... */}
        <div className="flex justify-between items-center mb-10">
-          <h1 className="text-3xl font-semibold font-poppins text-primary">
-        {  Cart}efvhdovkn
+          <h1 className="text-3xl font-semibold font-poppins text-secound flex items-center gap-1">
+        Cart <TiShoppingCart className="text-1xl"/>
         </h1>
-             <div>plgkelpgkmlm,</div>
+            <IoMdClose onClick={handleback}  className="text-xl hover:bg-primary hover:text-white w-[33px] h-[33px] duration-[.3s] rounded-full"/>
        </div>
          {/* .............................cart items........................ */}
         <div className="Allproducts flex flex-col mt-[20px] w-full h-[600px] overflow-y-scroll">
@@ -28,15 +32,15 @@ const handle =()=>{
           <div className="productimg_Name flex justify-between w-full">
              <div className="flex justify-between gap-2 mt-2">
             <img className="w-[70px] h-[77px] bg-[#000]" src={cartimg} alt="" />
-            <h3 className="text-xl text-primary font-normal font-poppins">{prodcutNm}</h3>
+            <h3 className="text-xl text-primary font-normal font-poppins">{prodcutNm}pants</h3>
            </div>
-             <h2 className="text-xl font-normal font-poppins"> {price}</h2>
+             <h2 className="text-xl font-normal font-poppins"> {price}$66</h2>
           </div>
              {/* .............single product */}
           <div className="productimg_Name flex justify-between w-full">
              <div className="flex justify-between gap-2 mt-2">
             <img className="w-[70px] h-[77px] bg-[#000]" src={cartimg} alt="" />
-            <h3 className="text-xl text-primary font-normal font-poppins">{prodcutNm}</h3>
+            <h3 className="text-xl text-primary font-normal font-poppins">yufyuf{prodcutNm}</h3>
            </div>
              <h2 className="text-xl font-normal font-poppins"> {price}</h2>
           </div>   {/* .............single product */}
