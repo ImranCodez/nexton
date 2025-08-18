@@ -88,7 +88,7 @@ const Navbar = () => {
     {/* <section onClick={handlecloss} className={`top-0 fixed z-50 w-full h-screen backdrop-blur-xs bg-[#00000000] `}>
     </section> */}
                            
-    <AddToCart closeCart={handlecloss} />
+    <AddToCart/>
     </>
   )
 }

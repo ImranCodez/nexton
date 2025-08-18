@@ -2,11 +2,18 @@ import React from "react";
 import { Link } from "react-router";
 
 const AddToCart = ({closeCart}) => {
+
+
+const handle =()=>{
+   
+    console.log(' hello miss')
+}
+
   return (
 
     <div className={`relative`}>
       {/* ..............shadow div................. */}
-      <div onClick={closeCart} className={`w-full h-screen  bg-[#64565631] left-0 top-[0%] fixed`}></div>
+      <div onClick={handle} className={`w-full h-screen  bg-[#64565631] left-0 top-[0%] fixed`}></div>
       <div className="w-[500px] h-screen absolute bg-white top-0 right-0 p-3">
          {/* ...........add to Cart header part...... */}
        <div className="flex justify-between items-center mb-10">
