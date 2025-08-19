@@ -6,15 +6,14 @@
   import AddToCart from './AddToCart';
 import { Link } from 'react-router';
 import { FaArrowDown } from "react-icons/fa";
-
-
+import { IoMdClose } from "react-icons/io";
 const Navbar = () => {
 
   const [showcart,setshocart]=useState(true)
   
-  const [showAccount,setShowAccount]=useState(true)
+  const [showAccount,setShowAccount]=useState([])
 
-console.log(showcart)
+
 
   const handlecloss=()=>{
       setshocart(!showcart)
@@ -56,9 +55,10 @@ console.log(showcart)
     </div> */}
                  
         {/* ............... resistration part............ */}
-    <div className={`flex items-center justify-center   top-[10%] right-3 ${showAccount? 'hidden' : 'visible w-full fixed h-screen bg-[#0000003d]'}`}>
+
+    <div className={`flex items-center justify-around  top-[0%] right-0 `}>
        
-       <div className='bg-[#0000]  w-[660px] h-[440px] flex items-center justify-between gap-[20px] rounded-4xl '>
+       <div className='bg-[#000] relative w-[790px] h-[440px] flex items-center justify-between rounded-4xl '>
                   
      <div className='w-[48%] h-[440px] bg-primary border-2 flex justify-center items-center flex-col hover:scale-[1.1] duration-[.4s] gap-6 rounded-4xl'>
               <h1 className='text-white text-4xl font-bold font-poppins'>Welcomne!</h1>
@@ -85,8 +85,19 @@ console.log(showcart)
             <input placeholder='Loging with github' className='w-[250px] border-3  bg-white rounded-4xl h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
            </div>
            </div>
-          
+           {/* ..............uiverse code start................. */}
+           
+<label class="relative inline-flex items-center cursor-pointer">
+  
+  <div class={`peer ring-0 bg-rose-400  rounded-full  outline-none duration-300} after:duration-500 w-12 h-12  shadow-md
+   peer-checked:bg-emerald-500  peer-focus:outline-none  after:content-['✖️'] after:rounded-full after:absolute after:outline-none 
+  after:h-10 after:w-10 after:bg-gray-50 after:top-1 after:left-1 after:flex after:justify-center after:items-center absolute right-[-70px]`}>
+  </div>
+</label>
+           {/* ..............uiverse code end................. */}
+          {/* <IoMdClose className='text-secound absolute right-[-50px] w-[60] h-[40px] text-4xl bg-[#88888870] '/> */}
       </div>
+     
     </div>
 
     {/* <section onClick={handlecloss} className={`top-0 fixed z-50 w-full h-screen backdrop-blur-xs bg-[#00000000] `}>
