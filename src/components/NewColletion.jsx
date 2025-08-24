@@ -5,9 +5,9 @@ const NewColletion = () => {
   return (
     <>
     
-    <section id='Newcollection' className='w-full pt-[161px] z-[-88]' >
-     <div className="container " style={{background:`url(${bannerzzz})`, backgroundRepeat:'no-repeat', backgroundPosition:'center', backgroundSize:'cover'}} >
-        <div className="textitems py-[120px] pl-[120px]">
+    <section id='Newcollection ' className='w-full pt-[161px] ' >
+     <div className="container  " style={{background:`url(${bannerzzz})`, backgroundRepeat:'no-repeat', backgroundPosition:'center', backgroundSize:'cover'}} >
+        <div className="textitems py-[120px] -z-[999] pl-[120px]">
             <p className='text-primary text-[20px] font-medium font-poppins'>100% Original Products</p>
             <h1 className='text-secound text-[38px] font-semibold font-poppins mb-[24px] w-[362px]'>The All New Fashion Collection Items</h1>
             <p  className='text-primary text-[20px] font-medium font-poppins mb-8'>Starting from: $59.99</p>

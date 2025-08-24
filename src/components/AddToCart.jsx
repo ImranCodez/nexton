@@ -5,20 +5,26 @@ import { TiShoppingCart } from "react-icons/ti";
 
 
 
-const AddToCart = ({closeCart,cartimg,prodcutNm,price,Totall,Amount,Cart,CheckOut}) => {
+const AddToCart = ({closeCart,cartimg,prodcutNm,price,Totall,Amount,CheckOut}) => {
 
-const [close,setclose] =useState([])
+const [close,setclose] = useState([])
+
+
+
 const handleback =()=>{
    setclose(!close)
 }
+
+
+
 console.log(close)
   return (
 
     <div className={`relative`}>
       {/* ..............shadow div................. */}
-      <div onClick={closeCart} className={`w-full h-screen visible ${!close? 'invisible':'visible'}  bg-[#00000080] top-0 left-0  fixed`}></div>
+      <div onClick={closeCart}  className={`w-full h-screen visible ${!close? 'invisible':'visible'}  bg-[#00000080] top-0 left-0  fixed`}></div>
 
-      <div className={`ar w-[500px] h-screen fixed bg-white top-0 right-0 p-3`}>
+      <div className={`ar w-[500px] h-screen fixed ${!close? 'invisible':'visible'} bg-white top-0 right-0 p-3`}>
          {/* ...........add to Cart header part...... */}
        <div className="flex justify-between items-center mb-10">
           <h1 className="text-3xl font-semibold font-poppins text-secound flex items-center gap-1">

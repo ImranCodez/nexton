@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import Singleproduct from "./common/Singleproduct";
 import axios from "axios";
 import { Link } from "react-router";
-import Recomondation from "../pages/Recomondation";
+import BredCrum from "./common/BredCrum";
+
+
+
 
 const Reco = () => {
   const [product, setproduct] = useState([]);
@@ -39,13 +42,13 @@ const Reco = () => {
     <>
       <section id="Reco" className="mt-[88px]">
         <div className="container">
-          <h1 className="text-[38px] text-secound font-semibold font-poppins mb-[40px]">
-            Recommendations.{" "}
-            <span className="text-[38px] text-[#4B5563] font-poppins font-semibold">
-              {" "}
-              Best matching products for you
-            </span>
-          </h1>
+          {/* <BredCrum Breadontent={'All Product'} Brealink={'/'} /> */}
+          <div className="flex justify-between">
+            <h1 className="text-[38px] text-secound font-semibold font-poppins mb-[40px]">Recommendations.<span className="text-[38px] text-[#4B5563] font-poppins font-semibold">Best matching products for you</span></h1>
+              <Link to={'Recomondation'}  className=" w-[100px] h-[40px] rounded-sm flex text-secound text-base justify-center items-center bg-amber-700 hover:bg-primary duration-[.4s] scale-[1.07]  hover:text-[#fff]" > Explore now</Link>       
+
+           </div>         
+          </div>
           <div className="flex justify-between flex-wrap mt-[10px]">
             {
             product.slice(0,4).map((items)=>(
@@ -53,10 +56,11 @@ const Reco = () => {
           }
           </div>
           <div className="flex justify-center mt-10">
-          <Link to={'Recomondation'}  className="py-[8px] px-[10px] rounded-sm flex text-secound text-base  bg-amber-700 hover:bg-primary duration-[.4s] scale-[1.07]  hover:text-[#fff]" >See More...</Link>          </div>
+          
+      
             
         </div>
-      </section>
+      </section> 
     </>
   );
 };

@@ -20,7 +20,7 @@ const Navbar = () => {
   }
 
 
-  
+  console.log(showAccount)
 
   return (
     <>
@@ -37,7 +37,7 @@ const Navbar = () => {
             <input className='w-full text-[14px] text-primary outline-none' placeholder='Search in products...' type="text" />
           </div>
            <div className="buttons">
-            <button onClick={()=>setShowAccount(!showAccount)}  className=' hover:text-white hover:bg-primary hover:scale-[1.1] duration-[.4s] text[24px] p-3 rounded-full  align-middle text-primary font-poppins mr-[10px]'><RiUserLine/></button>
+            <button onClick={()=>(setShowAccount(!showAccount))}  className=' hover:text-white hover:bg-primary hover:scale-[1.1] duration-[.4s] text[24px] p-3 rounded-full  align-middle text-primary font-poppins mr-[10px]'><RiUserLine/></button>
 
             <button onClick={()=>(setshocart(!showcart))} className=' text[24px] text-primary font-poppins  relative'><PiShoppingCartSimple/>
             <span className='  text-[#fff] w-[20px] h-[20px] bg-[#0EA5E9] rounded-full text-[12px] flex items-center justify-center absolute left-[8px] top-[-12px] '>3</span>
@@ -56,7 +56,7 @@ const Navbar = () => {
                  
         {/* ............... resistration part............ */}
 
-    <div className={`flex items-center justify-around  top-[0%] right-0 `}>
+    <div className={`flex items-center w-full h-screen ${!showAccount?'visible':'invisible'} justify-around fixed bg-amber-600 top-[10%] right-0 `}>
        
        <div className='bg-[#000] relative w-[790px] h-[440px] flex items-center justify-between rounded-4xl '>
                   
@@ -70,7 +70,7 @@ const Navbar = () => {
 
              {/* ..................LOGIN  PART........... */}
           
-           <div className='w-[48%] h-[440px] bg-primary border-2 flex items-center justify-center hover:scale-[1.1] duration-[.4s] flex-col gap-7 rounded-4xl'>
+            <div className='w-[48%] h-[440px] bg-primary border-2 flex items-center justify-center hover:scale-[1.1] duration-[.4s] flex-col gap-7 rounded-4xl'>
             <h1 className='text-white text-4xl font-bold font-poppins'>Welcome!</h1>
             <p className='w-[220px] text-white text-[14px]'>Login if already have a account.Unlock your New journey</p>
         
@@ -102,9 +102,12 @@ const Navbar = () => {
 
     {/* <section onClick={handlecloss} className={`top-0 fixed z-50 w-full h-screen backdrop-blur-xs bg-[#00000000] `}>
     </section> */}
- {
-  showcart && <AddToCart className={`text-xl`} closeCart={handlecloss} />
-}
+
+
+
+    {
+      showcart && <AddToCart className={`text-xl`} closeCart={handlecloss}/>
+    }
                         
     </>
   )

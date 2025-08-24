@@ -7,6 +7,8 @@ import Best_seller from '../components/Best_seller'
 import NewColletion from '../components/NewColletion'
 import Footer from '../components/Footer'
 
+import Details from './Details'
+
 const Home = () => {
   return (
     <>
@@ -16,6 +18,7 @@ const Home = () => {
     <Explore/>
     <Reco/>
     <Best_seller/>
+    <Details/>
     <NewColletion/>
     <Footer/>
     

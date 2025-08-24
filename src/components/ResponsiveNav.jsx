@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { CiSearch } from "react-icons/ci";
 import { RiUserLine } from "react-icons/ri";
 import { PiShoppingCartSimple } from "react-icons/pi";
+
 const ResponsiveNav = () => {
 
    const [shownav,setshowNav]=useState(false)
@@ -15,6 +16,7 @@ const ResponsiveNav = () => {
     
     <>
       <nav id="resonse-nav" className="w-full py-[20px] lg:hidden bg-[#fff]">
+
         <div className="container">
           <div className="nav-row  flex justify-between ">
             <div className="navlogo">

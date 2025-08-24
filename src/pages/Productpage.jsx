@@ -2,24 +2,30 @@ import React, { useEffect, useState } from 'react'
 import Singleproduct from '../components/common/Singleproduct'
 import axios from 'axios';
 
-const Recomondation = () => {
+const Productpage = () => {
 
-
-const [product, setproduct] = useState([]);
- 
+ const [products, setProducts] = useState([]);
+  const [page, setPage] = useState(1);
+  const itemsPerPage = 4;
 
   useEffect(() => {
     axios
       .get("https://api.escuelajs.co/api/v1/products")
       .then((res) => {
-        setproduct(res.data);
+        setProducts(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
 
+     const start = (page - 1) * itemsPerPage;
+     const currentItems = products.slice(start, start + itemsPerPage);
+     const totalPages = Math.ceil(products.length / itemsPerPage);
+     console.log(currentItems)
   return (
+ <>
+ 
    <div className="container">
      <div className='flex gap-[13px] justify-around mt-3'>
       <div className='w-[450px] h-[814px] bg-white'>
@@ -91,14 +97,18 @@ const [product, setproduct] = useState([]);
       </div>
         <div className='flex gap-[13px]  flex-wrap justify-around'>
             {
-            product.slice(0,8).map((items)=>(
-              <Singleproduct proimg={items.category.image} proName={items.title} proprice={items.price} />))
+            currentItems.slice(0,8).map((items)=>(
+              <Singleproduct />))
           }
         </div>
       
+        <Pagination totalPages={totalPages} currentPage={page} setPage={setPage} />
     </div>
    </div>
+ 
+ 
+ </>
   )
 }
 
-export default Recomondation
+export default Productpage

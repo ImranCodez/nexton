@@ -20,7 +20,14 @@ const Best_seller = () => {
   return (
     <section id='Best_seller' className='mt-[88px] w-full '>
        <div className="container">
+        
+         <div className='flex justify-between'>
     <h1 className='text-[38px] text-secound font-semibold font-poppins mb-[40px]'>Best Sellers. <span className='text-[38px] text-[#4B5563] font-poppins font-semibold'>Best selling of the month</span></h1>
+          <div className='flex justify-center items-center mt-[30px]'>
+          <Link to={'/Selling'} className='py-[10px] px-[12px] bg-secound text-base text-[#fff] hover:bg-primary rounded-[4px] '>See More....</Link>
+
+          </div>
+         </div>
        
        <div className='flex justify-around flex-wrap gap-2'>
          {
@@ -31,10 +38,7 @@ const Best_seller = () => {
           }
        </div>
           
-          <div className='flex justify-center items-center mt-[30px]'>
-      <Link className='py-[10px] px-[12px] bg-secound text-base text-[#fff] hover:bg-primary rounded-[4px] '>See More....</Link>
-
-          </div>
+         
 
        </div>
 
