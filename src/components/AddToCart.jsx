@@ -22,7 +22,7 @@ console.log(close)
 
     <div className={`relative`}>
       {/* ..............shadow div................. */}
-      <div onClick={closeCart}  className={`w-full h-screen visible ${!close? 'invisible':'visible'}  bg-[#00000080] top-0 left-0  fixed`}></div>
+      <div onClick={closeCart}  className={`w-full h-screen  ${!close? 'invisible':'visisble'}  bg-[#00000080] top-0 left-0  fixed`}></div>
 
       <div className={`ar w-[500px] h-screen fixed ${!close? 'invisible':'visible'} bg-white top-0 right-0 p-3`}>
          {/* ...........add to Cart header part...... */}

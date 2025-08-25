@@ -2,14 +2,18 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { TbStars } from "react-icons/tb";
 import { Link } from 'react-router';
-
+import BredCrum from '../components/common/BredCrum';
+import DetailsProduct from '../components/DetailsProduct';
+import ProductCustomize from '../components/ProductCustomize';
+import Reco from '../components/Reco';
 
 
 const Details = () => {
 
- const [product, setproduct] = useState([]);
-  const [product2, setproduct2] = useState([]);
+ const [product, setproduct] = useState([0]);
 
+
+          console.log(product)
   useEffect(() => {
     axios
       .get("https://api.escuelajs.co/api/v1/products")
@@ -28,20 +32,21 @@ const Details = () => {
     <>
     <section id='detailspage' className='mt-10'>
             <div className="container">
-             
+             {/* .............Bredcrum part.................. */}
+          <BredCrum Breadontent={'Detailspage'} Brealink={'/'} />
+            
              
         <div id='product info' className='flex justify-between'>
-            <div className='w-[804px] h-screen'>
-                <div className='w-full h-[690px] bg-amber-200 flex justify-between'>
-                    <div className='w-[140px] h-full bg-red-600'>
-                        <div className='w-full h-[155px] bg-[#0EA5E9] rounded-[16px] mb-[16px]'>tgert</div>
-                     <div className='w-full h-[155px] bg-[#0EA5E9] rounded-[16px] mb-[16px]'>tgert</div>
-                    <div className='w-full h-[155px] bg-[#0EA5E9] rounded-[16px] mb-[16px]'>tgert</div>
-                    <div className='w-full h-[155px] bg-[#0EA5E9] rounded-[16px] mb-[16px]'>tgert</div>
+            
+               {/* ...........left side......... */}
+                 <DetailsProduct/>
+                  {/* .......right side........... */}
+                  <ProductCustomize/>
+        </div>
+        {/* .............Ptroduct info........... */}
+          {/* .................product info left side .......................... */}
 
-                    </div>
-                </div>
-                 {/* .................product info.......................... */}
+            {/* ................right siide............ */}
                 <div className='w-full h-[572px] mt-[105px]'  >
                     <h1 className='text-[38px] text-secound font-semibold font-poppins'>Black Automatic Watch</h1>
                     <p className='text-[16px] text-primary font-normal font-poppins w-[735px]'></p>The St. Louis Meramec Canoe Company was founded by Alfred Wickett in 1922. Wickett had
@@ -72,11 +77,7 @@ const Details = () => {
                     </div>
                     
                 </div>
-            </div>
-            <div className='w-[460px] h-screen' >
-                <div className='h-[463px] w-full bg-amber-700 '></div>
-            </div>
-        </div>
+                <Reco/>
     </div>
     </section>
     

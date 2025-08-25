@@ -63,7 +63,22 @@ const Footer = () => {
                   
             </div>
         </div>
+         <div className='w-full  h-[100px] flex justify-around'>
+
+          <div className='flex items-end gap-5'>
+       <p className='py-[20px] px-[30px] rounded-s-xl bg-red-500 text-white hover:bg-primary duration-[.4s]' >first text </p>
+       <p className='py-[20px] px-[30px] rounded-s-xl bg-red-500 text-white hover:bg-primary duration-[.4s]' >secondtext</p>
+      </div>
+
+      <div className='flex gap-2 items-end justify-end w-[70%]'>
+        <button className='py-[10px] px-[50px] hover:bg-primary duration-[.4s] rounded-2xl bg-black text-white'>firstdiv</button>
+        <button className='py-[10px] px-[50px] hover:bg-primary duration-[.4s] rounded-2xl bg-black text-white'>seconddiv</button>
+        <button className='py-[10px] px-[50px] hover:bg-primary duration-[.4s] rounded-2xl bg-black text-white'>thirtdiv</button>
+      </div>
+      
      </div>
+     </div> 
+    
 
    </section>
   )

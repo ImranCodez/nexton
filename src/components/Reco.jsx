@@ -42,19 +42,20 @@ const Reco = () => {
     <>
       <section id="Reco" className="mt-[88px]">
         <div className="container">
-          {/* <BredCrum Breadontent={'All Product'} Brealink={'/'} /> */}
+         
           <div className="flex justify-between">
             <h1 className="text-[38px] text-secound font-semibold font-poppins mb-[40px]">Recommendations.<span className="text-[38px] text-[#4B5563] font-poppins font-semibold">Best matching products for you</span></h1>
               <Link to={'Recomondation'}  className=" w-[100px] h-[40px] rounded-sm flex text-secound text-base justify-center items-center bg-amber-700 hover:bg-primary duration-[.4s] scale-[1.07]  hover:text-[#fff]" > Explore now</Link>       
 
            </div>         
-          </div>
-          <div className="flex justify-between flex-wrap mt-[10px]">
+             <div className="flex justify-between flex-wrap mt-[10px]">
             {
             product.slice(0,4).map((items)=>(
               <Singleproduct proimg={items.category.image} proName={items.title} proprice={items.price} />))
           }
           </div>
+          </div>
+        
           <div className="flex justify-center mt-10">
           
       

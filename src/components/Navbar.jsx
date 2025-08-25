@@ -56,9 +56,9 @@ const Navbar = () => {
                  
         {/* ............... resistration part............ */}
 
-    <div className={`flex items-center w-full h-screen ${!showAccount?'visible':'invisible'} justify-around fixed bg-amber-600 top-[10%] right-0 `}>
+    <div className={`flex items-center w-full h-screen ${!showAccount?'visible':'invisible'} justify-around fixed bg-[#0000007e] top-[10%] right-0 `}>
        
-       <div className='bg-[#000] relative w-[790px] h-[440px] flex items-center justify-between rounded-4xl '>
+       <div className='bg-[#0000001f] relative w-[790px] h-[440px] flex items-center justify-between rounded-4xl '>
                   
      <div className='w-[48%] h-[440px] bg-primary border-2 flex justify-center items-center flex-col hover:scale-[1.1] duration-[.4s] gap-6 rounded-4xl'>
               <h1 className='text-white text-4xl font-bold font-poppins'>Welcomne!</h1>
