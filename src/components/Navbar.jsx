@@ -9,7 +9,7 @@ import { FaArrowDown } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 const Navbar = () => {
 
-  const [showcart,setshocart]=useState(true)
+  const [showcart,setshocart]=useState(false)
   
   const [showAccount,setShowAccount]=useState([])
 

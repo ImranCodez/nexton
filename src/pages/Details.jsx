@@ -43,8 +43,8 @@ const Details = () => {
                   {/* .......right side........... */}
                   <ProductCustomize/>
         </div>
-        {/* .............Ptroduct info........... */}
-          {/* .................product info left side .......................... */}
+        
+        
 
             {/* ................right siide............ */}
                 <div className='w-full h-[572px] mt-[105px]'  >

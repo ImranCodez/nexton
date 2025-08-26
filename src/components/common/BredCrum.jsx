@@ -7,7 +7,7 @@ const BredCrum = ({Brealink,Breadontent}) => {
     <div>
 
 
-        <div className='flex justify-around mb-4 items-center w-[200px] h-[40px] rounded-sm bg-amber-600 text-black'>
+        <div className='flex pl-4 mb-4 items-center w-full h-[40px] hover:scale-[1.01] duration-[.3s] rounded-sm bg-primary text-white'>
             <Link to={'/'}>Home</Link>
             <IoIosArrowDroprightCircle className='w-[40px] h-[30px]'/>
             <Link to={Brealink}>{Breadontent}</Link>

@@ -8,6 +8,7 @@ import NewColletion from '../components/NewColletion'
 import Footer from '../components/Footer'
 
 import Details from './Details'
+import CheckOutpage from './CheckOutpage'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
     <Reco/>
     <Best_seller/>
     <Details/>
+    <CheckOutpage/>
     <NewColletion/>
     <Footer/>
     
