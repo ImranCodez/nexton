@@ -115,7 +115,7 @@ const CheckOutpage = () => {
               </div>
             </div>
         </div>
-          <div className='w-[618px] h-[604px] border-y-orange-950'>
+          <div className='w-[618px] h-[604px] border-y-orange-950 '>
             <h2 className='text-[24px]'>Order summary</h2>
           </div>
 
