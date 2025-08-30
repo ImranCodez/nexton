@@ -24,7 +24,7 @@ const Best_seller = () => {
          <div className='flex justify-between'>
     <h1 className='text-[38px] text-secound font-semibold font-poppins mb-[40px]'>Best Sellers. <span className='text-[38px] text-[#4B5563] font-poppins font-semibold'>Best selling of the month</span></h1>
           <div className='flex justify-center items-center mt-[30px]'>
-          <Link to={'/Selling'} className='py-[10px] px-[12px] bg-secound text-base text-[#fff] hover:bg-primary rounded-[4px] '>See More....</Link>
+          <Link to={'/Selling'} className='py-[10px] px-[12px]  bg-amber-700 text-base text-[#fff] hover:bg-primary rounded-[4px] '>See More....</Link>
 
           </div>
          </div>

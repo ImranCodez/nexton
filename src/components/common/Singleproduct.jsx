@@ -11,7 +11,7 @@ const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating}) => {
   return (
     <>
     
-    <div className='w-[309px] h-[448px] relative'>
+    <div className='w-[309px] h-[448px] relative bg-amber-700'>
      <div className='absolute top-[20px] right-[20px]  group duration-[.3s] text-2xl flex flex-col items-center'>
       <div className='mt-[-27px] absolute top-0 right-0 duration-[.3s] w-[90px] h-[40px] bg-[#000] text-[#fff] rounded-[5px] invisible group-hover:visible flex justify-center items-center text-base group-hover:mt-[-50px]'>shop</div>
       <IoBagHandleOutline className='   text-[18px]   rounded-[4px]  group-hover:bg-primary group-hover:text-[#fff]' />

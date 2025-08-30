@@ -29,10 +29,11 @@ const Navbar = () => {
       <div className="container ">
         <div className="nav_row  flex justify-between items-center">
           <div className="logo w-[119px] h-[46px]">
-            <img src={logo} alt="logo" />
+            
+            <Link to={'/'}> <img src={logo} alt="logo" /></Link>
 
           </div> 
-          <div className="searchbar w-[400px] h-[52px] bg-[#F8F8F8] rounded-[100px] flex items-center gap-[10px] pl-[24px]">
+          <div className="searchbar w-[400px]   h-[52px] bg-[#F8F8F8] rounded-[100px] flex items-center gap-[10px] pl-[24px]">
               <CiSearch className='text-xl' />
             <input className='w-full text-[14px] text-primary outline-none' placeholder='Search in products...' type="text" />
           </div>
