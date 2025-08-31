@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Singleproduct from "../components/common/Singleproduct";
 import axios from "axios";
 import Pagination from "../components/Pagination";
+import Single_seller from "../components/common/Single_seller";
 
 const Productpage = () => {
   const [products, setProducts] = useState([]);

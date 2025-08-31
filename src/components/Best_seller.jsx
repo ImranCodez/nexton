@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Single_seller from './common/Single_seller'
 import axios from 'axios'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 
 const Best_seller = () => {
 
@@ -16,6 +16,13 @@ const Best_seller = () => {
          },[])
          
    console.log(mostsell)
+
+
+   const Navigate=useNavigate()
+   const Handleseller =()=>{
+    Navigate('Details/')
+    console.log(' hea okah fine')
+   }
     
   return (
     <section id='Best_seller' className='mt-[88px] w-full '>
@@ -32,7 +39,7 @@ const Best_seller = () => {
        <div className='flex justify-around flex-wrap gap-2'>
          {
             mostsell.slice(0,4).map((items2)=>(
-            <Single_seller bestSellimg={items2.images} bestSellNme={items2.title} bestPrice={items2.price} Rating={items2.rating} discount={items2.discountPercentage} />
+            <Single_seller SellerClik={Handleseller} bestSellimg={items2.images} bestSellNme={items2.title} bestPrice={items2.price} Rating={items2.rating} discount={items2.discountPercentage} />
       
             ))
           }

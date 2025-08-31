@@ -13,7 +13,7 @@ const Reco = () => {
 
   useEffect(() => {
     axios
-      .get("https://api.escuelajs.co/api/v1/products")
+      .get(`https://api.escuelajs.co/api/v1/products`)
       .then((res) => {
         setproduct(res.data);
       })
