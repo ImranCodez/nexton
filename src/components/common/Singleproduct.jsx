@@ -2,7 +2,7 @@ import React from 'react'
 import { TiStarFullOutline } from "react-icons/ti";
 import { IoBagHandleOutline } from "react-icons/io5";
 
-const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating}) => {
+const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating,Detailseclick}) => {
 
 
 
@@ -11,13 +11,13 @@ const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating}) => {
   return (
     <>
     
-    <div className='w-[309px] h-[448px] relative bg-amber-700'>
+    <div onClick={Detailseclick} className='w-[309px] h-[448px] relative'>
      <div className='absolute top-[20px] right-[20px]  group duration-[.3s] text-2xl flex flex-col items-center'>
       <div className='mt-[-27px] absolute top-0 right-0 duration-[.3s] w-[90px] h-[40px] bg-[#000] text-[#fff] rounded-[5px] invisible group-hover:visible flex justify-center items-center text-base group-hover:mt-[-50px]'>shop</div>
       <IoBagHandleOutline className='   text-[18px]   rounded-[4px]  group-hover:bg-primary group-hover:text-[#fff]' />
      </div>
      <div className='w-full h-[348px] bg-white rounded-[16px] relative z-[-10]'>
-        <img src={proimg} alt="product iamge" />
+        <img src={proimg} alt="productiamge" />
      </div>
      <div className="productext">
         <div className='flex justify-between mt-[20px]'>
@@ -25,7 +25,7 @@ const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating}) => {
         <h2 className='text-[18px] text-secound font-semibold  font-poppins'>{proprice}$</h2>
      </div>
      <div className='flex gap-[20px] justify-between '>
-        <h2 className='text-[18px] text-primary font-semibold  font-poppins italic'>{proacc}</h2>
+        <h2 className='text-[18px] text-primary font-semibold  font-poppins italic productNme'>{proacc}</h2>
         <h2 className='text-[18px] text-primary font-semibold  font-poppins line-through italic'>{prodis}</h2>
      </div>
      </div>

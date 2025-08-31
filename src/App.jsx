@@ -9,6 +9,7 @@ import Longing from "./pages/Longing";
 import Resis from "./pages/Resis";
 import Productpage from "./pages/Productpage";
 import CheckOutpage from "./pages/CheckOutpage";
+import Details from "./pages/Details";
 
 
 
@@ -27,6 +28,8 @@ const App = () => {
           <Route path="/Register" element={<Resis />} />
             <Route path="/Productpage" element={<Productpage />} />
             <Route path="/CheckOutpage" element={<CheckOutpage />} />
+          <Route path="/Details" element={<Details />} />
+
         </Route>
       </Route>
     )

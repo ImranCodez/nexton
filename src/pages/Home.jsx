@@ -6,8 +6,6 @@ import Reco from '../components/Reco'
 import Best_seller from '../components/Best_seller'
 import NewColletion from '../components/NewColletion'
 import Footer from '../components/Footer'
-
-import Details from './Details'
 import CheckOutpage from './CheckOutpage'
 
 const Home = () => {
@@ -19,7 +17,6 @@ const Home = () => {
     <Explore/>
     <Reco/>
     <Best_seller/>
-    <Details/>
     <CheckOutpage/>
     <NewColletion/>
     <Footer/>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Singleproduct from "./common/Singleproduct";
 import axios from "axios";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import BredCrum from "./common/BredCrum";
 
 
@@ -38,6 +38,17 @@ const Reco = () => {
 
   // console.log(product);
 
+
+// ..navigate...................//
+
+const Navigate=useNavigate()
+
+const handledetailse=()=>{
+  console.log(' heea hocce')
+  Navigate('Details/')
+}
+
+
   return (
     <>
       <section id="Reco" className="mt-[88px]">
@@ -45,13 +56,13 @@ const Reco = () => {
          
           <div className="flex justify-between">
             <h1 className="text-[38px] text-secound font-semibold font-poppins mb-[40px]">Recommendations.<span className="text-[38px] text-[#4B5563] font-poppins font-semibold">Best matching products for you</span></h1>
-              <Link to={'Recomondation'}  className=" w-[100px] h-[40px] rounded-sm flex text-secound text-base justify-center items-center bg-amber-700 hover:bg-primary duration-[.4s] scale-[1.07]  hover:text-[#fff]" > Explore now</Link>       
+            <Link to={'Productpage'}  className=" w-[100px] h-[40px] rounded-sm flex text-secound text-base justify-center items-center bg-amber-700 hover:bg-primary duration-[.4s] scale-[1.07]  hover:text-[#fff]" > Explore now</Link>       
 
            </div>         
              <div className="flex justify-between flex-wrap mt-[10px]">
             {
             product.slice(0,4).map((items)=>(
-              <Singleproduct proimg={items.category.image} proName={items.title} proprice={items.price} />))
+              <Singleproduct Detailseclick={handledetailse} proimg={items.category.image} proName={items.title} proprice={items.price} />))
           }
           </div>
           </div>

@@ -106,13 +106,14 @@ console.log(close)
            </div>
              <h2 className="text-xl font-normal font-poppins"> {price}</h2>
           </div>
-          
+             
         </div>
-            <div className="flex items-center justify-between mb-5 mt-8">
-               <h2 className="text-2xl text-secound font-poppins font-medium">{Totall}</h2>
+         <div className="flex items-center justify-between mb-5 mt-8">
+               <h2 className="text-2xl text-secound font-poppins font-medium">wfefe{Totall}</h2>
                <h2  className="text-2xl text-secound font-poppins font-medium">{Amount}</h2>
             </div>
-        <Link className="w-full text-center py-5 rounded-3xl bg-secound  text-white inline-block align-middle hover:scale-[1.1] duration-[.4s]">{CheckOut}</Link>
+           
+        <Link className="w-full text-center py-5 rounded-3xl bg-secound  text-white inline-block align-middle hover:scale-[1.1] duration-[.4s]">{CheckOut}thtrtryt</Link>
       </div>
     </div>
   );
