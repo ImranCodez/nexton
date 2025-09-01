@@ -5,16 +5,19 @@ import { FaFacebook } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { FaTelegram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-
+ import footerimg  from '../assets/images/footer (1).png'
+  import footerimg2  from '../assets/images/footer (2).png'
+   import footerimg3  from '../assets/images/footer (3).png'
+    import footerimg4  from '../assets/images/footer (4).png'
 
 const Footer = () => {
   return (
    <section id='Footer' className=' w-full h-[414px] bg-white'>
 
        <div className="container">
-        <div className='flex  justify-around items-center  py-[60px]'>
+        <div className='flex  justify-around items-center w-full '>
             <div  className='flex flex-col'>
-                <div className='text-[15px] font-semibold font-poppins ml-'>
+                <div className='text-[15px] font-semibold font-poppins'>
                  <img src={logo} className='' alt="footer-logo" />
                 </div>
          
@@ -63,17 +66,19 @@ const Footer = () => {
                   
             </div>
         </div>
-         <div className='w-full  h-[100px] flex justify-around'>
+        {/* ......Down footer er part........... */}
+         <div className='w-full  h-[50px] flex items-center justify-around mt-5'>
 
-          <div className='flex items-end gap-5'>
-       <p className='py-[20px] px-[30px] rounded-s-xl bg-red-500 text-white hover:bg-primary duration-[.4s]' >first text </p>
-       <p className='py-[20px] px-[30px] rounded-s-xl bg-red-500 text-white hover:bg-primary duration-[.4s]' >secondtext</p>
+          <div>
+       <p className='text-[16px] text-primary font-normal font-poppins pl-10' >Nexton eCommerce. © 2024 </p>
       </div>
 
-      <div className='flex gap-2 items-end justify-end w-[70%]'>
-        <button className='py-[10px] px-[50px] hover:bg-primary duration-[.4s] rounded-2xl bg-black text-white'>firstdiv</button>
-        <button className='py-[10px] px-[50px] hover:bg-primary duration-[.4s] rounded-2xl bg-black text-white'>seconddiv</button>
-        <button className='py-[10px] px-[50px] hover:bg-primary duration-[.4s] rounded-2xl bg-black text-white'>thirtdiv</button>
+      <div className='flex gap-2 items-center justify-end w-[70%]'>
+        <Link className='m-0 p-0' to={'/'}><img className='m-0 p-0'  src={footerimg} alt="fototerimage" /></Link>
+        <Link className='m-0 p-0' to={'/'}><img className='m-0 p-0' src={footerimg2} alt="fototerimage" /></Link>
+        <Link className='m-0 p-0' to={'/'}><img className='m-0 p-0' src={footerimg3} alt="fototerimage" /></Link>
+          <Link className='m-0 p-0' to={'/'}><img  className='m-0 p-0' src={footerimg4} alt="fototerimage" /></Link>
+
       </div>
       
      </div>
