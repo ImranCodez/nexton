@@ -22,21 +22,22 @@ const Footer = () => {
                 </div>
          
                 <div className='flex gap-2 w-[200px] items-center mt-[20px]'>
-                    <div><FaFacebook className='text-blue-700 '/></div>
-                    <h2 className=' text-[18px] text-primary font-normal font-poppins'>Facebook</h2>
+                    <div className='p-2.5 hover:bg-primary group rounded-[4px] duration-[.40s] '><FaFacebook className='text-blue-700 group-hover:text-white'/></div>
+                    <h2 className='  text-[18px] text-primary font-normal font-poppins'>Facebook</h2>
                 </div>
-                <div className='flex gap-2 w-[200px] items-center  mt-[20px]'>
-                <IoLogoYoutube className='text-red-600'/>
+                <div className='flex gap-2 w-[200px] items-center '>
+                <div className='p-2.5 hover:bg-primary group rounded-[4px] duration-[.40s] '><IoLogoYoutube className='text-red-600 group-hover:text-white'/></div>
                 <Link className='text-[18px] text-primary font-normal font-poppins '> Yuotube</Link>
 
                 </div>
-                 <div className='flex gap-2 w-[200px] items-center  mt-[20px]'>
-                  <FaTelegram className='text-blue-400'/>
+                 <div className='flex gap-2 w-[200px] items-center ]'>
+                <div className='p-2.5 hover:bg-primary group rounded-[4px] duration-[.40s] '><FaTelegram className='text-blue-400 group-hover:text-white'/></div>
+
                     <Link className='text-[18px] text-primary font-normal font-poppins'> Telegram</Link>
                   </div>
                  
-                  <div className='flex gap-3 w-[200px] items-center  mt-[20px]'>
-                  <FaTwitter className='text-blue-400'/>
+                  <div className='flex gap-3 w-[200px] items-center  '>
+                 <div className='p-2.5 hover:bg-primary group rounded-[4px] duration-[.40s] '><FaTwitter className='text-blue-400 group-hover:text-white'/></div>
                     <Link className='text-[18px] text-primary font-normal font-poppins'> Twitter</Link>
                   </div>
                   

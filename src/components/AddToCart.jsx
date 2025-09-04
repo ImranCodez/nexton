@@ -5,7 +5,7 @@ import { TiShoppingCart } from "react-icons/ti";
 
 
 
-const AddToCart = ({closeCart,cartimg,prodcutNm,price,Totall,Amount,CheckOut}) => {
+const AddToCart = ({closeCart,cartimg,prodcutNm,price,Totall,Amount,CheckOut,}) => {
 
 const [close,setclose] = useState([])
 
@@ -102,19 +102,19 @@ console.log(close)
           <div className="productimg_Name flex justify-between w-full">
              <div className="flex justify-between gap-2 mt-2">
             <img className="w-[70px] h-[77px] bg-[#000]" src={cartimg} alt="" />
-            <h3 className="text-xl text-primary font-normal font-poppins">{prodcutNm}</h3>
+            <h3 className="text-xl text-primary font-normal font-poppins">aa{prodcutNm}</h3>
            </div>
-             <h2 className="text-xl font-normal font-poppins"> {price}</h2>
+             <h2 className="text-xl font-normal font-poppins"> dd{price}</h2>
           </div>
              <div>
 
           <div className="flex items-center justify-between  mb-5 mt-8">
-               <h2 className="text-2xl text-secound font-poppins  font-medium">{Totall}</h2>
-               <h2  className="text-2xl text-secound font-poppins font-medium">{Amount}</h2>
+               <h2 className="text-2xl text-secound font-poppins  font-medium">etgrgrggr  {Totall}</h2>
+               <h2  className="text-2xl text-secound font-poppins font-medium">efewfewfewf{Amount}</h2>
             </div>
            
 
-             <Link className="w-full text-center  rounded-3xl bg-secound text-white p-10  block align-middle hover:scale-[1.1] duration-[.4s]">{CheckOut}thtrtryt</Link>
+             <Link to={'/CheckOutpage'} className="w-full text-center  bg-secound text-white p-5  block rounded-2xl   duration-[.4s]">{CheckOut}thtrtryt</Link>
 
              </div>
         </div>

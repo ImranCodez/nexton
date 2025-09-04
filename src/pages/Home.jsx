@@ -17,7 +17,6 @@ const Home = () => {
     <Explore/>
     <Reco/>
     <Best_seller/>
-    <CheckOutpage/>
     <NewColletion/>
     <Footer/>
     
