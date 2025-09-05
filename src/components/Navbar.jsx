@@ -19,9 +19,6 @@ const Navbar = () => {
       setshocart(!showcart)
   }
 
-
-  console.log(showAccount)
-
   return (
     <>
     <nav id='Main_nav' className='py-[-27px] bg-[#f8f8f8a1] w-full h-[52px] z-[-999] hidden lg:block '>

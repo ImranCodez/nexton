@@ -43,9 +43,9 @@ const Reco = () => {
 
 const Navigate=useNavigate()
 
-const handledetailse=()=>{
-  console.log(' heea hocce')
-  Navigate('Details/')
+const handledetailse=(proinfo)=>{
+  console.log(proinfo)
+  Navigate(`Details/${proinfo.id}`)
 }
 
 
@@ -62,7 +62,7 @@ const handledetailse=()=>{
              <div className="flex justify-between flex-wrap mt-[10px]">
             {
             product.slice(0,4).map((items)=>(
-              <Singleproduct Detailseclick={handledetailse} proimg={items.category.image} proName={items.title} proprice={items.price} />))
+              <Singleproduct Detailseclick={()=>handledetailse(items)} proimg={items.category.image} proName={items.title} proprice={items.price} />))
           }
           </div>
           </div>

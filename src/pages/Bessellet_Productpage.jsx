@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Singleproduct from "../components/common/Singleproduct";
 import axios from "axios";
 import Pagination from "../components/Pagination";
 import Single_seller from "../components/common/Single_seller";
 
 const Bessellet_Productpage = () => {
   // const [products, setProducts] = useState([]);
-  // const [page, setPage] = useState(1);
-  // const itemsPerPage = 8;
+  // const [page, setPage] = useState(1);+------------
+  const itemsPerPage = 8;
   //  console.log(products)
 //   useEffect(() => {
 //     axios
@@ -22,22 +21,21 @@ const Bessellet_Productpage = () => {
 //       });
 //   }, []);
 
-       const [mostsell,setmostsell] =useState([])
+      //    const [mostsell,setmostsell] = useState(['FUHFEHEWUHEWUFHEWUFEUFRH'])
 
          
 
-      useEffect(()=>{
-      axios.get('https://dummyjson.com/products')    
-      .then((res2)=>(setmostsell(res2.data.products)))
-       .catch((err)=>{console.log(err)})
-         },[])
-         
+      // useEffect(()=>{
+      // axios.get('https://dummyjson.com/products')    
+      // .then((res2)=>(setmostsell(res2.data.products)))
+      //  .catch((err)=>{console.log(err)})
+      //    },[])
 
-         
+         console.log(mostsell)
   const start = (page - 1) * itemsPerPage;
   const currentItems = products.slice(start, start + itemsPerPage);
   const totalPages = Math.ceil(products.length / itemsPerPage);
-  console.log(currentItems);
+
   return (
     <>
       <div className="container">
@@ -155,13 +153,11 @@ const Bessellet_Productpage = () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-[13px]  flex-wrap justify-around">
-           {
-            mostsell.slice(0,4).map((items2)=>(
-            <Single_seller SellerClik={Handleseller} bestSellimg={items2.images} bestSellNme={items2.title} bestPrice={items2.price} Rating={items2.rating} discount={items2.discountPercentage} />
-      
-            ))
+          {
+
           }
+          <div className="flex gap-[13px]  flex-wrap justify-around">
+            <Single_seller/>
           </div>
         </div>
        <div className="flex justify-end "><Pagination  totalPages={totalPages} currentPage={page} setPage={setPage} /></div>   </div>

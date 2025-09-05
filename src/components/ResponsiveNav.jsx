@@ -8,7 +8,7 @@ import { PiShoppingCartSimple } from "react-icons/pi";
 const ResponsiveNav = () => {
 
    const [shownav,setshowNav]=useState(false)
-  console.log(shownav)
+  
 
 
   return (

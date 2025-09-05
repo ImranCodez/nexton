@@ -143,6 +143,7 @@ const Productpage = () => {
               </div>
             </div>
           </div>
+          {/* ................left side */}
           <div className="flex gap-[13px]  flex-wrap justify-around">
             {currentItems.slice(0, 8).map((items) => (
               <Singleproduct proimg={items.category.image} proName={items.title} proprice={items.price} proacc ={items.slug} />
