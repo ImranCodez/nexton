@@ -25,26 +25,28 @@ const Details = () => {
   }, []);
 
 
-   console.log(product.images)
- 
+  
+  
+  console.log(product.images);
   return (
     <>
     <section id='detailspage' className='mt-10'>
             <div className="container">
              {/* .............Bredcrum part.................. */}
+
+
           <BredCrum Breadontent={'Detailspage'} Brealink={'/'} />
             
              
         <div id='product info' className='flex justify-between'>
             
                {/* ...........left side......... */}
-                 <DetailsProduct mainimg={product.images}/>
+                 <DetailsProduct mainimg={product?.images}/>
                   {/* .......right side........... */}
                   <ProductCustomize/>
         </div>
         
-        
-
+          
             {/* ................right siide............ */}
                 <div className='w-full h-[572px] mt-[105px]'  >
                     <h1 className='text-[38px] text-secound font-semibold font-poppins'>{product.title}</h1>

@@ -45,13 +45,8 @@ const Navbar = () => {
       </div>
           
     </nav>
-{/* .......................add to cart er part.............. */}
+
     
-    {/* <div className={`top-[70%] duration-[.3s] w-full fixed bg-black  ${showcart? 'right-[-2000px]' : 'right-0'}`}>
-           
-         <AddToCart/>
-    </div> */}
-                 
         {/* ............... resistration part............ */}
 
     <div className={`flex items-center w-full h-screen ${!showAccount?'visible':'invisible'} justify-around fixed bg-[#0000007e] top-[10%] right-0 `}>
@@ -59,9 +54,8 @@ const Navbar = () => {
        <div className='bg-[#0000001f] relative w-[790px] h-[440px] flex items-center justify-between rounded-4xl '>
                   
      <div className='w-[48%] h-[440px] bg-primary border-2 flex justify-center items-center flex-col hover:scale-[1.1] duration-[.4s] gap-6 rounded-4xl'>
-              <h1 className='text-white text-4xl font-bold font-poppins'>Welcomne!</h1>
+              <h1 className='text-white text-4xl font-bold font-poppins'>Welcome!</h1>
                 <p className='text-[14px] text-white font-medium font-poppins'>Create an acoount if you are new here </p>
-
                 <Link className='w-full h-[50px]  border-white border-2  bg-secound text-white flex items-center justify-center rounded-2xl hover:bg-white hover:text-secound duration-[.4s]'  onClick={()=>setShowAccount(!showAccount)} to={'/Register'}>Sign Up</Link>
 
              </div>

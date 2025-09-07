@@ -1,35 +1,112 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { FaLess } from 'react-icons/fa6'
+import { useSearchParams } from 'react-router'
 import { Link } from 'react-router'
 
-const Resis = ({Risnam, email,password,repassword,taken,or ,continuee,Login}) => {
+const Resis = () => {
+
+const [UserName,setUsername]=useState('')
+const [email, setemail]=useState('')
+const [passoword, setpassword]=useState('')
+const [repassword, setrepasswoerd]=useState('')
+
+// ................text error.....................//
+const [Usernamerror,setUsernamerror]=useState('')
+const [emailrror,setemailrror]=useState('')
+const [passworderror,setpassworerror]=useState('')
+const [repassworderror,setrepassworerror]=useState('')
+
+// .............show pass .......................//
+const [showpass, setshowpass]=useState(true)
+// ...............Border error......................//
+
+const [emailbordererror, setemailbordererror]=useState('border-[#00000041]')
+const [Userbordernamerror, setUserbordernamerror]=useState('border-[#00000041]')
+const [passwoborderrderror, setpasswordbbotredererror]=useState('border-[#00000041]')
+const [repasswordbordererror, setrepasswordbortdererror]=useState('border-[#00000041]')
+    
+
+  const Handlesubmit=(alu)=>{
+      alu.preventDefault()
+
+    if(!UserName){
+      // ...........ussrName..........
+      setUsernamerror('Enter Your Username')
+      setUserbordernamerror(' border-red-600')
+  
+    
+    } 
+    // ....email aprt.................//
+     if(!email){
+      // ...........ussrName..........
+      setemailrror('Entert Your email')
+      setemailbordererror('border-red-600')
+    
+    } 
+        //  ................password part............//
+       if(!passoword){
+          setpassworerror('Enter your passoword')
+          setpasswordbbotredererror('border-red-600')
+       }
+    // ............Repassord..................//
+       if(!repassword){
+        setrepassworerror('Enter your comnform password')
+        setrepasswordbortdererror('border-red-600')
+       }
+  }
+
+
   return (
     <>
     
-     <form action="">
+     
      <section id='Resis' className='w-[440px] h-[550px] bg-[#Fff] top-0 right-[50%] absolute rounded-[10px] '>
-        <h1 className='text-[38px] text-secound font-semibold font-poppins mb-[60px] px-[144px] '>{Risnam}</h1>
-        <label htmlFor="" className='text-secound font-semibold text-[20px] pl-[12px]'>{email}</label>
+        <h1 className='text-[38px] text-secound font-semibold font-poppins mb-[60px] px-[144px] '>Resistration</h1>
+      <form  onSubmit={Handlesubmit}  action="">  {/* ..........UseName part............ */}
+       <div className='relative'>
+         <h2 className='text-base text-red-700 font-medium font-poppins absolute rigth-[70%]  w-full flex justify-center mb-[-20px] '>{Usernamerror}</h2>
+        <label htmlFor="" className='text-secound font-semibold text-[20px] pl-[12px]'>UserName</label>
         <br />
-        <input placeholder='Enter Your Email' className='w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm border-[#00000015] ' type="text" />
+        <input onChange={(e)=>{setUsername(e.target.value), setUsernamerror(''),setUserbordernamerror('')}} placeholder='Enter Your UserName' className = {`relative w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm  ${Userbordernamerror} `} type="text" />
           <br />
           <br />
-          <label htmlFor=""className='text-secound font-semibold text-[20px] pl-[12px]'>{password}</label>
+       </div>
+        <div className='relative'>
+            {/* .............Email part........ */}
+           <h2 className='text-base text-red-700 font-medium font-poppins absolute rigth-[70%] top-0 w-full flex justify-center mb-[-20px] '>{emailrror}</h2>
+           <label htmlFor="" className='text-secound font-semibold text-[20px] pl-[12px]'>Email</label>
         <br />
-        
-        <input placeholder='Enter your password' className='w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm border-[#0000001c]  ' type="text" />
-          
+        <input onChange={(e)=>{setemail(e.target.value),setemailrror(''),setemailbordererror('') }} placeholder='Enter Your Email' className={`w-full pl-[10px] ronded-[12px] border h-[43px] outline-0 ${emailbordererror} rounded-sm `} type="email" />
           <br />
           <br />
-          <label htmlFor=""className='text-secound font-semibold text-[20px] pl-[12px]'>{repassword}</label>
+        </div>
+          {/* ..................passoword part .............. */}
+
+         <div className='relative'>
+          <h2 className='text-base text-red-700 font-medium font-poppins absolute rigth-[70%]  w-full flex justify-center mb-[-20px] '>{passworderror}</h2>
+          <label htmlFor=""className='text-secound font-semibold text-[20px] pl-[12px]'>password</label>
+          <div onClick={()=>setshowpass(!showpass)} className='bg-gray-400'>showme</div>
+        <br />
+           <input  onChange={(e)=>{setpassword(e.target.value),setpassworerror(''),setpasswordbbotredererror('')}} placeholder='Enter your password' className={`w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm  ${passwoborderrderror}`} type={showpass? 'text':'password'} />
+          <br />
+          <br />
+         </div>
+         <div className='relative'>
+           {/* ..............repassword part ................ */}
+        <h2 className='text-base text-red-700 font-medium font-poppins absolute right-[-20%] top-0 w-full flex justify-center mb-[-20px] '>{repassworderror}</h2>
+
+          <label htmlFor=""className='text-secound font-semibold text-[20px] pl-[12px]'>password(Again)</label>
          <br />
-        <input placeholder='Enter Your comnform password' className='w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm border-[#00000025] ' type="text" />
-            <sub className='bg-secound w-full h-[52px] rounded-3xl text-white text-[18px] mt-[24px] mb-6 font-medium font-poppins flex items-center justify-center hover:scale-[1.03] duration-[.4s] '>{continuee}</sub>
-
-             <label className='text-[14px] font-medium text-[#4B5563]  px-[190px]' htmlFor="">{or}</label>
-             <Link className='flex justify-center bottom-0 text-[#0EA5E9]'><h4 className='text-[#4B5563]'>{taken}</h4>{Login}</Link>
-
+        <input onChange={(e)=>{setrepasswoerd(e.target.value),setrepassworerror(''),setrepasswordbortdererror('')}} placeholder='Enter Your comnform password' className={`w-full pl-[10px] ronded-[12px] h-[43px] ${repasswordbordererror} outline-0 border rounded-sm `} type="password" />
+         </div>
+         
+            <button className='bg-secound w-full h-[52px] rounded-3xl text-white text-[18px] mt-[24px] mb-6 font-medium font-poppins flex items-center justify-center hover:scale-[1.03] duration-[.4s] '>continuee</button>
+               {/* ..............alternative part .................... */}
+             <label className='text-[14px] font-medium text-[#4B5563]  px-[190px]' htmlFor="">or</label>
+             <Link className='flex justify-center bottom-0 text-[#0EA5E9]'><h4 className='text-[#4B5563]'> already taken</h4>Login ?</Link>
+    </form>
     </section>
-     </form>
+ 
        
 
     

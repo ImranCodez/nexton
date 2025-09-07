@@ -14,9 +14,7 @@ const Best_seller = () => {
       .then((res2)=>(setmostsell(res2.data.products)))
        .catch((err)=>{console.log(err)})
          },[])
-         
-         console.log(mostsell)
-
+        
    const Navigate=useNavigate()
    const Handleseller =()=>{
     Navigate('Details/')
@@ -39,7 +37,7 @@ const Best_seller = () => {
        <div className='flex justify-around flex-wrap gap-2'>
          {
             mostsell.slice(0,4).map((items2)=>(
-            <Single_seller SellerClik={Handleseller} bestSellimg={items2.images} bestSellNme={items2.title} bestPrice={items2.price} Rating={items2.rating} discount={items2.discountPercentage} />
+            <Single_seller SellerClik={Handleseller} bestSellimg={items2.images[1]} bestSellNme={items2.title} bestPrice={items2.price} Rating={items2.rating} discount={items2.discountPercentage} />
       
             ))
           }

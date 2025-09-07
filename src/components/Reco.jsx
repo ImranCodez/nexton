@@ -15,13 +15,15 @@ const Reco = () => {
     axios
       .get(`https://api.escuelajs.co/api/v1/products`)
       .then((res) => {
-        setproduct(res.data);
+        setproduct(res.data)
+    
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
 
+  console.log(product)
 
   //     useEffect(() => {
   //   const fetchProducts = async () => {
@@ -44,7 +46,6 @@ const Reco = () => {
 const Navigate=useNavigate()
 
 const handledetailse=(proinfo)=>{
-  console.log(proinfo)
   Navigate(`Details/${proinfo.id}`)
 }
 

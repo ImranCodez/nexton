@@ -8,7 +8,7 @@ const Productpage = () => {
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
   const itemsPerPage = 8;
-   console.log(products)
+  
   useEffect(() => {
     axios
       .get("https://api.escuelajs.co/api/v1/products")
@@ -25,7 +25,7 @@ const Productpage = () => {
   const start = (page - 1) * itemsPerPage;
   const currentItems = products.slice(start, start + itemsPerPage);
   const totalPages = Math.ceil(products.length / itemsPerPage);
-  console.log(currentItems);
+ 
   return (
     <>
       <div className="container">
