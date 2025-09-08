@@ -48,6 +48,12 @@ const Navigate=useNavigate()
 const handledetailse=(proinfo)=>{
   Navigate(`Details/${proinfo.id}`)
 }
+// .............Cart handle funvttion.....................//
+const Carthandle = (mydata)=>{
+  Existidpro.Push(mydata)
+  console.log(Existidpro)
+    localStorage.setItem('productId',JSON.stringify(exitdata))
+}
 
 
   return (
@@ -63,7 +69,7 @@ const handledetailse=(proinfo)=>{
              <div className="flex justify-between flex-wrap mt-[10px]">
             {
             product.slice(0,4).map((items)=>(
-              <Singleproduct Detailseclick={()=>handledetailse(items)} proimg={items.category.image} proName={items.title} proprice={items.price} />))
+              <Singleproduct Detailseclick={()=>handledetailse(items)} clcikCArt={()=>Carthandle(items.id)} proimg={items.category.image} proName={items.title} proprice={items.price} />))
           }
           </div>
           </div>

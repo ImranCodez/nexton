@@ -26,7 +26,7 @@ const Best_seller = () => {
        <div className="container">
         {/* ...............bestseeller header part start........ */}
    
-        
+       
          <div className='flex justify-between'>
     <h1 className='text-[38px] text-secound font-semibold font-poppins mb-[40px]'>Best Sellers. <span className='text-[38px] text-[#4B5563] font-poppins font-semibold'>Best selling of the month</span></h1>
           <div className='flex justify-center items-center mt-[30px]'>
@@ -37,7 +37,7 @@ const Best_seller = () => {
        <div className='flex justify-around flex-wrap gap-2'>
          {
             mostsell.slice(0,4).map((items2)=>(
-            <Single_seller SellerClik={Handleseller} bestSellimg={items2.images[1]} bestSellNme={items2.title} bestPrice={items2.price} Rating={items2.rating} discount={items2.discountPercentage} />
+            <Single_seller SellerClik={Handleseller} bestSellimg={items2.images} bestSellNme={items2.title} bestPrice={items2.price} Rating={items2.rating} discount={items2.discountPercentage} />
       
             ))
           }

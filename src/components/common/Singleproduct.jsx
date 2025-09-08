@@ -1,8 +1,9 @@
 import React from 'react'
 import { TiStarFullOutline } from "react-icons/ti";
 import { IoBagHandleOutline } from "react-icons/io5";
+import { FaCartFlatbed } from "react-icons/fa6";
 
-const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating,Detailseclick}) => {
+const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating,Detailseclick,clcikCArt}) => {
 
 
 
@@ -12,9 +13,9 @@ const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating,Detail
     <>
     
     <div onClick={Detailseclick} className='w-[309px] h-[448px] relative'>
-     <div className='absolute top-[20px] right-[20px]  group duration-[.3s] text-2xl flex flex-col items-center'>
+     <div className='absolute  right-5 top-5  group duration-[.3s] text-2xl flex flex-col items-center'>
+      <button onClick={clcikCArt} className='w-10 h-10 rounded-full   text-[18px] bg-amber-700  flex justify-center items-center  group-hover:bg-primary group-hover:text-[#fff]'><FaCartFlatbed/></button>
       <div className='mt-[-27px] absolute top-0 right-0 duration-[.3s] w-[90px] h-[40px] bg-[#000] text-[#fff] rounded-[5px] invisible group-hover:visible flex justify-center items-center text-base group-hover:mt-[-50px]'>shop</div>
-      <IoBagHandleOutline className='   text-[18px]   rounded-[4px]  group-hover:bg-primary group-hover:text-[#fff]' />
      </div>
      <div className='w-full h-[348px] bg-white rounded-[16px] relative z-[-10]'>
         <img src={proimg} alt="productiamge" />

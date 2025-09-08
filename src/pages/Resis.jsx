@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { FaLess } from 'react-icons/fa6'
 import { useSearchParams } from 'react-router'
 import { Link } from 'react-router'
+import { GoEye } from "react-icons/go";
+import { IoMdEyeOff } from "react-icons/io";
+
 
 const Resis = () => {
 
@@ -85,9 +88,14 @@ const [repasswordbordererror, setrepasswordbortdererror]=useState('border-[#0000
          <div className='relative'>
           <h2 className='text-base text-red-700 font-medium font-poppins absolute rigth-[70%]  w-full flex justify-center mb-[-20px] '>{passworderror}</h2>
           <label htmlFor=""className='text-secound font-semibold text-[20px] pl-[12px]'>password</label>
-          <div onClick={()=>setshowpass(!showpass)} className='bg-gray-400'>showme</div>
-        <br />
-           <input  onChange={(e)=>{setpassword(e.target.value),setpassworerror(''),setpasswordbbotredererror('')}} placeholder='Enter your password' className={`w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm  ${passwoborderrderror}`} type={showpass? 'text':'password'} />
+        <br/>
+          <input  onChange={(e)=>{setpassword(e.target.value),setpassworerror(''),setpasswordbbotredererror('')}} placeholder='Enter your password' className={`w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm  ${passwoborderrderror}`} type={showpass? 'text':'password'} />
+         {
+           showpass?
+           <GoEye onClick={()=>setshowpass(!showpass)}  className='bottom-[35px] right-5 absolute'/>
+           :
+          <IoMdEyeOff onClick={()=>setshowpass(!showpass)}  className='bottom-[35px] right-5 absolute'/>
+         }
           <br />
           <br />
          </div>
