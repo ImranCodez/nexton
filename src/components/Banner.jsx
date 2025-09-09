@@ -38,7 +38,7 @@ const Banner = () => {
      
   <Slider {...settings} >
           <section className='w-full h-[550px] lg:h-[600px]' >
-            <div className='bg-left lg:bg-center ' style={{backgroundImage:`url(${BannerImg})` , backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+            <div className='bg-left lg:bg-center' style={{backgroundImage:`url(${BannerImg})` , backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
               <div className="container">
                 <div id="Banner_Text" className='lg:py-[148px] pt-[163px] pb-[199px] pl-[24px] lg:pl-0'>
                     <h2 className='font-medium text-[14px] lg:text-[20px] text-Primary'>Starting from: $49.99</h2>

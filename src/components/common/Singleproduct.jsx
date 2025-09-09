@@ -1,7 +1,8 @@
 import React from 'react'
 import { TiStarFullOutline } from "react-icons/ti";
 import { IoBagHandleOutline } from "react-icons/io5";
-import { FaCartFlatbed } from "react-icons/fa6";
+import { BsCartCheckFill } from "react-icons/bs";
+
 
 const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating,Detailseclick,clcikCArt}) => {
 
@@ -12,18 +13,19 @@ const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating,Detail
   return (
     <>
     
-    <div onClick={Detailseclick} className='w-[309px] h-[448px] relative'>
+  <div className='relative'>
      <div className='absolute  right-5 top-5  group duration-[.3s] text-2xl flex flex-col items-center'>
-      <button onClick={clcikCArt} className='w-10 h-10 rounded-full   text-[18px] bg-amber-700  flex justify-center items-center  group-hover:bg-primary group-hover:text-[#fff]'><FaCartFlatbed/></button>
+      <button onClick={clcikCArt} className='w-10 h-10 rounded-full -z-10  text-[18px] bg-amber-700  flex justify-center items-center  group-hover:bg-primary group-hover:text-[#fff]'><BsCartCheckFill/></button>
       <div className='mt-[-27px] absolute top-0 right-0 duration-[.3s] w-[90px] h-[40px] bg-[#000] text-[#fff] rounded-[5px] invisible group-hover:visible flex justify-center items-center text-base group-hover:mt-[-50px]'>shop</div>
      </div>
+     <div onClick={Detailseclick} className='w-[309px] h-[448px]'>
      <div className='w-full h-[348px] bg-white rounded-[16px] relative z-[-10]'>
         <img src={proimg} alt="productiamge" />
      </div>
      <div className="productext">
         <div className='flex justify-between mt-[20px]'>
-        <h2 className='text-[18px] text-secound font-semibold productNme font-poppins'>{proName}</h2>
-        <h2 className='text-[18px] text-secound font-semibold  font-poppins'>{proprice}$</h2>
+        <h2 className='text-[18px] text-secound font-semibold productNme font-poppins -z-10 '>{proName}</h2>
+        <h2 className='text-[18px] text-secound font-semibold  font-poppins -z-10'>{proprice}$</h2>
      </div>
      <div className='flex gap-[20px] justify-between '>
         <h2 className='text-[18px] text-primary font-semibold  font-poppins italic productNme'>{proacc}</h2>
@@ -32,11 +34,12 @@ const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating,Detail
      </div>
      <div className='flex gap-2 items-center mt-4 '>
       
-      <TiStarFullOutline className='text-[#FBBF24] text-[20px]'/>
-        4.(98) {prorating}
+      <TiStarFullOutline className='text-[#FBBF24] text-[20px] -z-10'/>
+        <p className='  -z-10'>   4.(98) {prorating}</p>
 
      </div>
     </div>
+  </div>
     
     
     </>

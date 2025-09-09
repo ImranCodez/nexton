@@ -23,22 +23,7 @@ const Reco = () => {
       });
   }, []);
 
-  console.log(product)
 
-  //     useEffect(() => {
-  //   const fetchProducts = async () => {
-  //     try {
-  //       const res = await axios.get("https://api.escuelajs.co/api/v1/products");
-  //       setproduct(res.data);
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
-
-  //   fetchProducts();
-  // }, []);
-
-  // console.log(product);
 
 
 // ..navigate...................//
@@ -50,9 +35,9 @@ const handledetailse=(proinfo)=>{
 }
 // .............Cart handle funvttion.....................//
 const Carthandle = (mydata)=>{
-  Existidpro.Push(mydata)
-  console.log(Existidpro)
-    localStorage.setItem('productId',JSON.stringify(exitdata))
+  let Existidpro=JSON.parse(localStorage.getItem('productId'))||[]
+  Existidpro.push(mydata) 
+    localStorage.setItem('productId',JSON.stringify(Existidpro))
 }
 
 
@@ -63,7 +48,7 @@ const Carthandle = (mydata)=>{
          
           <div className="flex justify-between">
             <h1 className="text-[38px] text-secound font-semibold font-poppins mb-[40px]">Recommendations.<span className="text-[38px] text-[#4B5563] font-poppins font-semibold">Best matching products for you</span></h1>
-            <Link to={'Productpage'}  className=" w-[100px] h-[40px] rounded-sm flex text-secound text-base justify-center items-center bg-amber-700 hover:bg-primary duration-[.4s] scale-[1.07]  hover:text-[#fff]" > Explore now</Link>       
+            <Link to={'Productpage/'}  className=" w-[100px] h-[40px] rounded-sm flex text-secound text-base justify-center items-center  bg-amber-700 hover:bg-primary duration-[.4s] scale-[1.07]  hover:text-[#fff]" > Explore now</Link>       
 
            </div>         
              <div className="flex justify-between flex-wrap mt-[10px]">
