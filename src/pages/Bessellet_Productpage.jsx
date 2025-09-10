@@ -8,30 +8,32 @@ const Bessellet_Productpage = () => {
   // const [page, setPage] = useState(1);+------------
   const itemsPerPage = 8;
   //  console.log(products)
-//   useEffect(() => {
-//     axios
-//       .get("https://dummyjson.com/products")
-//       .then((res) => {
-//         setProducts(res.data);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://dummyjson.com/products")
+  //     .then((res) => {
+  //       setProducts(res.data);
         
          
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//       });
-//   }, []);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, []);
 
-      //    const [mostsell,setmostsell] = useState(['FUHFEHEWUHEWUFHEWUFEUFRH'])
+         const [mostsell,setmostsell] = useState([])
 
          
 
-      // useEffect(()=>{
-      // axios.get('https://dummyjson.com/products')    
-      // .then((res2)=>(setmostsell(res2.data.products)))
-      //  .catch((err)=>{console.log(err)})
-      //    },[])
+      useEffect(()=>{
+      axios.get('https://dummyjson.com/products')    
+      .then((res2)=>(setmostsell(res2.data.products)))
+       .catch((err)=>{console.log(err)})
+         },[])
 
          console.log(mostsell)
+
+
   const start = (page - 1) * itemsPerPage;
   const currentItems = products.slice(start, start + itemsPerPage);
   const totalPages = Math.ceil(products.length / itemsPerPage);

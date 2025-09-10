@@ -15,7 +15,7 @@ const Singleproduct = ({proimg ,proName ,proacc,proprice,prodis,prorating,Detail
     
   <div className='relative'>
      <div className='absolute  right-5 top-5  group duration-[.3s] text-2xl flex flex-col items-center'>
-      <button onClick={clcikCArt} className='w-10 h-10 rounded-full -z-10  text-[18px] bg-amber-700  flex justify-center items-center  group-hover:bg-primary group-hover:text-[#fff]'><BsCartCheckFill/></button>
+      <button onClick={clcikCArt} className='w-10 h-10 rounded-full   text-[18px] bg-amber-700  flex justify-center items-center  group-hover:bg-primary group-hover:text-[#fff]'><BsCartCheckFill/></button>
       <div className='mt-[-27px] absolute top-0 right-0 duration-[.3s] w-[90px] h-[40px] bg-[#000] text-[#fff] rounded-[5px] invisible group-hover:visible flex justify-center items-center text-base group-hover:mt-[-50px]'>shop</div>
      </div>
      <div onClick={Detailseclick} className='w-[309px] h-[448px]'>
