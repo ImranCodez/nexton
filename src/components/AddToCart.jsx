@@ -6,7 +6,7 @@ import axios from "axios";
 
 
 
-const AddToCart = ({closeCart,cartimg,prodcutNm,price,Totall,Amount,CheckOut,}) => {
+const AddToCart = ({closeCart}) => {
 
 const [close,setclose] = useState([])
 
@@ -36,10 +36,16 @@ useEffect(() => {
    
 
       const Cartprduct=product.filter((item)=>{
-         return localids.includes(item.id)
+         return localids.includes(item.id)  
   
       })
+      // ................Reduce method  2 jinish niya kaj kore first is function and secound is initial number..............//
+      const toalamount=Cartprduct.reduce((sum,item)=>{
+        return sum + item.price
+      },0)
 
+
+      console.log(toalamount)
 
   return (
 
@@ -51,17 +57,17 @@ useEffect(() => {
          {/* ...........add to Cart header part...... */}
        <div className="flex justify-between items-center mb-10">
           <h1 className="text-3xl font-semibold font-poppins text-secound flex items-center gap-1">
-        Cart <TiShoppingCart className="text-1xl"/>
+            Cart <TiShoppingCart className="text-1xl"/>
         </h1>
             <IoMdClose onClick={handleback}  className="text-xl hover:bg-primary hover:text-white w-[33px] h-[33px] duration-[.3s] rounded-full"/>
        </div>
          {/* .............................cart items........................ */}
         <div className="Allproducts flex flex-col mt-[20px] w-full h-[600px]">
-          {/* .............single product */}
           {
-
-          Cartprduct.map((item)=>(
+            
+            Cartprduct.map((item)=>(
               
+              /* .............single product.................. */
           <div key={item.id} className="productimg_Name flex justify-between w-full  overflow-y-scroll">
              <div className="flex justify-between gap-2 mt-2">
             <img className="w-[70px] h-[77px] bg-[#000]" src={item.images} alt="cartimge" />
@@ -76,7 +82,7 @@ useEffect(() => {
 
           <div className="flex items-center justify-between  mb-5 mt-8">
                <h2 className="text-2xl text-secound font-poppins  font-medium">Totall</h2>
-               <h2  className="text-2xl text-secound font-poppins font-medium">Amount</h2>
+               <h2  className="text-2xl text-secound font-poppins font-medium">{toalamount}</h2>
             </div>
            
 

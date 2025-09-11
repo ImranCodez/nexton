@@ -4,9 +4,8 @@
   import { RiUserLine } from "react-icons/ri";
   import { PiShoppingCartSimple } from "react-icons/pi";
   import AddToCart from './AddToCart';
-import { Link } from 'react-router';
-import { FaArrowDown } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
+  import { Link } from 'react-router';
+
 const Navbar = () => {
 
   const [showcart,setshocart]=useState(false)
@@ -17,6 +16,14 @@ const Navbar = () => {
 
   const handlecloss=()=>{
       setshocart(!showcart)
+  }
+  
+
+  // ......................closs the resis and ressis.........//
+    const [showlognresis,setshowlognresis]=useState('') 
+     
+  const removehandle=()=>{
+    console.log('hea hocce vai')
   }
 
   return (
@@ -72,20 +79,20 @@ const Navbar = () => {
                 </div>
            
            <div className="inputitems flex justify-center flex-col">
-           <input placeholder='Loging with google' className='w-[250px] border-3  bg-white rounded-4xl h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
-            <input placeholder='Loging with Facebook' className='w-[250px] border-3  bg-white rounded-4xl h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
-            <input placeholder='Loging with github' className='w-[250px] border-3  bg-white rounded-4xl h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
+           <input placeholder='Loging with google' className='w-[250px] border-3  bg-white rounded-[6px] h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
+            <input placeholder='Loging with Facebook' className='w-[250px] border-3  bg-white rounded-[6px] h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
+            <input placeholder='Loging with github' className='w-[250px] border-3  bg-white rounded-[6px] h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
            </div>
            </div>
            {/* ..............uiverse code start................. */}
            
-<label class="relative inline-flex items-center cursor-pointer">
+              <label class="relative inline-flex items-center cursor-pointer">
   
-  <div class={`peer ring-0 bg-rose-400  rounded-full  outline-none duration-300} after:duration-500 w-12 h-12  shadow-md
-   peer-checked:bg-emerald-500  peer-focus:outline-none  after:content-['✖️'] after:rounded-full after:absolute after:outline-none 
-  after:h-10 after:w-10 after:bg-gray-50 after:top-1 after:left-1 after:flex after:justify-center after:items-center absolute right-[-70px]`}>
-  </div>
-</label>
+             <div onClick={removehandle} class={`peer ring-0 bg-rose-400     rounded-full  outline-none duration-300} after:duration-500 w-12 h-12  shadow-md
+                     peer-checked:bg-emerald-500  peer-focus:outline-none  after:content-['✖️'] after:rounded-full after:absolute after:outline-none 
+                      after:h-10 after:w-10 after:bg-gray-50 after:top-1 after:left-1 after:flex after:justify-center after:items-center absolute right-[-70px]`}>
+              </div>
+        </label>
            {/* ..............uiverse code end................. */}
           {/* <IoMdClose className='text-secound absolute right-[-50px] w-[60] h-[40px] text-4xl bg-[#88888870] '/> */}
       </div>
