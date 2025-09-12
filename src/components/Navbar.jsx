@@ -12,7 +12,8 @@ const Navbar = () => {
   
   const [showAccount,setShowAccount]=useState([])
 
-
+const Localproduct =JSON.parse(localStorage.getItem('productId'))
+console.log(Localproduct)
 
   const handlecloss=()=>{
       setshocart(!showcart)
