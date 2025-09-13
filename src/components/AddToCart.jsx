@@ -35,12 +35,12 @@ useEffect(() => {
   }, []);
    
 
-      const Cartprduct=product.filter((item)=>{
+      const Cartprduct=product?.filter((item)=>{
          return localids.includes(item.id)  
   
       })
       // ................Reduce method  2 jinish niya kaj kore first is function and secound is initial number..............//
-      const toalamount=Cartprduct.reduce((sum,item)=>{
+      const toalamount=Cartprduct?.reduce((sum,item)=>{
         return sum + item.price
       },0)
 
@@ -65,15 +65,15 @@ useEffect(() => {
         <div className="Allproducts flex flex-col mt-[20px] w-full h-[600px]">
           {
             
-            Cartprduct.map((item)=>(
+            Cartprduct?.map((item)=>(
               
               /* .............single product.................. */
           <div key={item.id} className="productimg_Name flex justify-between w-full  overflow-y-scroll">
              <div className="flex justify-between gap-2 mt-2">
-            <img className="w-[70px] h-[77px] bg-[#000]" src={item.images} alt="cartimge" />
-            <h3 className="text-xl text-primary font-normal font-poppins">{item.title}</h3>
+            <img className="w-[70px] h-[77px] bg-[#000]" src={item?.images} alt="cartimge" />
+            <h3 className="text-xl text-primary font-normal font-poppins">{item?.title}</h3>
            </div>
-             <h2 className="text-xl font-normal font-poppins"> {item.price}$</h2>
+             <h2 className="text-xl font-normal font-poppins"> {item?.price}$</h2>
           </div>
           ))
 

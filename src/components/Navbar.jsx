@@ -13,6 +13,7 @@ const Navbar = () => {
   const [showAccount,setShowAccount]=useState([])
 
 const Localproduct =JSON.parse(localStorage.getItem('productId'))
+
 console.log(Localproduct)
 
   const handlecloss=()=>{
@@ -46,7 +47,7 @@ console.log(Localproduct)
             <button onClick={()=>(setShowAccount(!showAccount))}  className=' hover:text-white hover:bg-primary hover:scale-[1.1] duration-[.4s] text[24px] p-3 rounded-full  align-middle text-primary font-poppins mr-[10px]'><RiUserLine/></button>
 
             <button onClick={()=>(setshocart(!showcart))} className=' text[24px] text-primary font-poppins  relative'><PiShoppingCartSimple/>
-            <span className='  text-[#fff] w-[20px] h-[20px] bg-[#0EA5E9] rounded-full text-[12px] flex items-center justify-center absolute left-[8px] top-[-12px] '>3</span>
+            <span className='  text-[#fff] w-[20px] h-[20px] bg-[#0EA5E9] rounded-full text-[12px] flex items-center justify-center absolute left-[8px] top-[-12px] '>{Localproduct? Localproduct.length :0}</span>
             </button>
            </div>
         </div>
