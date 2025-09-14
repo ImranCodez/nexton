@@ -59,7 +59,7 @@ const [repasswordbordererror, setrepasswordbortdererror]=useState('border-[#0000
         setrepasswordbortdererror('border-red-600')
        }
        else{
-        toast.success('🦄 your resistration succeeded!', {
+        toast.success(' your resistration succeeded!', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -80,7 +80,8 @@ const [repasswordbordererror, setrepasswordbortdererror]=useState('border-[#0000
      
      <section id='Resis' className='w-[440px] h-[550px] bg-[#Fff] top-0 right-[50%] absolute rounded-[10px] '>
         <h1 className='text-[38px] text-secound font-semibold font-poppins mb-[60px] px-[144px] '>Resistration</h1>
-      <form  onSubmit={Handlesubmit}  action="">  {/* ..........UseName part............ */}
+      <form  onSubmit={Handlesubmit}  action=""> 
+         {/* ..........UseName part............ */}
        <div className='relative'>
          <h2 className='text-base text-red-700 font-medium font-poppins absolute rigth-[70%]  w-full flex justify-center mb-[-20px] '>{Usernamerror}</h2>
         <label htmlFor="" className='text-secound font-semibold text-[20px] pl-[12px]'>UserName</label>

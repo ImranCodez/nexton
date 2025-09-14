@@ -10,24 +10,30 @@ const Navbar = () => {
 
   const [showcart,setshocart]=useState(false)
   
-  const [showAccount,setShowAccount]=useState([])
+  const [showAccount,setShowAccount]=useState(false)
 
-const Localproduct =JSON.parse(localStorage.getItem('productId'))
+   const Localproduct =JSON.parse(localStorage.getItem('productId'))
 
-console.log(Localproduct)
-
-  const handlecloss=()=>{
-      setshocart(!showcart)
+   const handlecloss=()=>{
+     setshocart(!showcart)
+    }
+    
+    
+    // ......................closs the resis and ressis.........//
+    const [showlognresis,setshowlognresis]=useState(false) 
+    
+    const removehandle=()=>{
+      if(setshowlognresis(!showlognresis)){
+      }
+      
   }
-  
 
-  // ......................closs the resis and ressis.........//
-    const [showlognresis,setshowlognresis]=useState('') 
-     
-  const removehandle=()=>{
-    console.log('hea hocce vai')
+    const [shadow, setshadow]=useState(true)
+
+  const shadowremove=()=>{
+    setShowAccount(!showAccount)
   }
-
+ console.log(shadow)
   return (
     <>
     <nav id='Main_nav' className='py-[-27px] bg-[#f8f8f8a1] w-full h-[52px] z-[-999] hidden lg:block '>
@@ -58,11 +64,11 @@ console.log(Localproduct)
     
         {/* ............... resistration part............ */}
 
-    <div className={`flex items-center w-full h-screen ${!showAccount?'visible':'invisible'} justify-around fixed bg-[#0000007e] top-[10%] right-0 `}>
+        <div onClick={shadowremove} className={`flex items-center  w-full h-screen ${!showAccount?'invisible':'visible'} justify-around  fixed bg-[#0000005e] top-0 right-0 `}>
        
-       <div className='bg-[#0000001f] relative w-[790px] h-[440px] flex items-center justify-between rounded-4xl '>
+          <div className={`bg-[#00000000] relative w-[790px] h-[440px] flex ${showlognresis? 'invisible':'ivisible'} items-center justify-between  rounded-4xl`}>
                   
-     <div className='w-[48%] h-[440px] bg-primary border-2 flex justify-center items-center flex-col hover:scale-[1.1] duration-[.4s] gap-6 rounded-4xl'>
+          <div className='w-[48%] h-[440px] bg-primary border-2 flex justify-center items-center flex-col hover:scale-[1.1] duration-[.4s] gap-6 rounded-4xl'>
               <h1 className='text-white text-4xl font-bold font-poppins'>Welcome!</h1>
                 <p className='text-[14px] text-white font-medium font-poppins'>Create an acoount if you are new here </p>
                 <Link className='w-full h-[50px]  border-white border-2  bg-secound text-white flex items-center justify-center rounded-2xl hover:bg-white hover:text-secound duration-[.4s]'  onClick={()=>setShowAccount(!showAccount)} to={'/Register'}>Sign Up</Link>
@@ -90,9 +96,10 @@ console.log(Localproduct)
            
               <label class="relative inline-flex items-center cursor-pointer">
   
-             <div onClick={removehandle} class={`peer ring-0 bg-rose-400     rounded-full  outline-none duration-300} after:duration-500 w-12 h-12  shadow-md
+             <div onClick={removehandle} class={`peer ring-0 bg-secound  group   rounded-full  outline-none duration-300} after:duration-500 w-12 h-12  shadow-md
                      peer-checked:bg-emerald-500  peer-focus:outline-none  after:content-['✖️'] after:rounded-full after:absolute after:outline-none 
                       after:h-10 after:w-10 after:bg-gray-50 after:top-1 after:left-1 after:flex after:justify-center after:items-center absolute right-[-70px]`}>
+                    <span className={` w-0 group-hover:w-32  after:content-[''] rounded-2xl text-[#fff0] border-2 outline-2 border-secound outline-secound absolute invisible group-hover:visible duration-[.4s] h-10 bg-primary flex justify-end top-1 left-4 items-center pr-3 group-hover:text-white text-[17px] font-medium`}>Not Now</span>
               </div>
         </label>
            {/* ..............uiverse code end................. */}
