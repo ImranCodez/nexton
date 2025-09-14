@@ -52,9 +52,9 @@ const Addhandle=()=>{
                         </div>
                         <div className='w-[390px] h-[50px] mt-5 ml-[33px] mr-[33px] flex justify-between'>
                             <div className='w-[109px] h-[40px] rounded-full bg-[#E5E7EB] flex items-center justify-around'>
-                                   <button onClick={Addhandle} className=' w-6 h-6 bg-white rounded-full text-[16px] font-bold font-poppins '>+</button>
-                                   <p>{Value}</p>
                                    <button onClick={Removehandle} className='w-6 h-6 bg-white rounded-full text-[16px] font-bold font-poppins '>-</button>
+                                   <p>{Value}</p>
+                                   <button onClick={Addhandle} className=' w-6 h-6 bg-white rounded-full text-[16px] font-bold font-poppins '>+</button>
                             </div>
                             <div>
                                 <button className='w-[178px] h-[52px] rounded-full text-white text-[16px] font-medium font-poppins hover:bg-primary duration-[.4s] hover:scale-[1.1] bg-secound flex items-center gap-3 justify-center '> <IoBagHandleOutline/> Add to cart</button>

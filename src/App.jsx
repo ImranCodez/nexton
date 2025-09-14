@@ -11,6 +11,7 @@ import Productpage from "./pages/Productpage";
 import CheckOutpage from "./pages/CheckOutpage";
 import Details from "./pages/Details";
 import Bessellet_Productpage from "./pages/Bessellet_Productpage";
+ import { ToastContainer } from 'react-toastify';
 
 
 
@@ -39,6 +40,7 @@ const App = () => {
 
   return (
     <>
+    <ToastContainer/>
       <RouterProvider router={MyRout} />
     </>
   );

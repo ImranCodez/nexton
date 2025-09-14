@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router'
 import { Link } from 'react-router'
 import { GoEye } from "react-icons/go";
 import { IoMdEyeOff } from "react-icons/io";
+import { Bounce, toast } from 'react-toastify';
 
 
 const Resis = () => {
@@ -20,7 +21,8 @@ const [passworderror,setpassworerror]=useState('')
 const [repassworderror,setrepassworerror]=useState('')
 
 // .............show pass .......................//
-const [showpass, setshowpass]=useState(true)
+const [showpass, setshowpass]=useState(false)
+const [reshowpass, resetshowpass]=useState(false)
 // ...............Border error......................//
 
 const [emailbordererror, setemailbordererror]=useState('border-[#00000041]')
@@ -55,6 +57,19 @@ const [repasswordbordererror, setrepasswordbortdererror]=useState('border-[#0000
        if(!repassword){
         setrepassworerror('Enter your comnform password')
         setrepasswordbortdererror('border-red-600')
+       }
+       else{
+        toast.success('🦄 your resistration succeeded!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+});
        }
   }
 
@@ -94,19 +109,28 @@ const [repasswordbordererror, setrepasswordbortdererror]=useState('border-[#0000
            showpass?
            <GoEye onClick={()=>setshowpass(!showpass)}  className='bottom-[35px] right-5 absolute'/>
            :
-          <IoMdEyeOff onClick={()=>setshowpass(!showpass)}  className='bottom-[35px] right-5 absolute'/>
+            <IoMdEyeOff onClick={()=>setshowpass(!showpass)}  className='bottom-[35px] right-5 absolute'/>
          }
           <br />
           <br />
          </div>
-         <div className='relative'>
            {/* ..............repassword part ................ */}
+         <div className='relative'>
         <h2 className='text-base text-red-700 font-medium font-poppins absolute right-[-20%] top-0 w-full flex justify-center mb-[-20px] '>{repassworderror}</h2>
 
           <label htmlFor=""className='text-secound font-semibold text-[20px] pl-[12px]'>password(Again)</label>
          <br />
-        <input onChange={(e)=>{setrepasswoerd(e.target.value),setrepassworerror(''),setrepasswordbortdererror('')}} placeholder='Enter Your comnform password' className={`w-full pl-[10px] ronded-[12px] h-[43px] ${repasswordbordererror} outline-0 border rounded-sm `} type="password" />
+        <input onChange={(e)=>{setrepasswoerd(e.target.value),setrepassworerror(''),setrepasswordbortdererror('')}} placeholder='Enter Your comnform password' className={`w-full pl-[10px] ronded-[12px] h-[43px] ${repasswordbordererror} outline-0 border rounded-sm `} type={reshowpass? 'text':'password'} />
+            {
+           reshowpass?
+           <GoEye onClick={()=>resetshowpass(!reshowpass)}  className='bottom-[35px] right-5 absolute'/>
+           :
+            <IoMdEyeOff onClick={()=>resetshowpass(!reshowpass)}  className='bottom-[35px] right-5 absolute'/>
+         }
+         <br />
+         <br />
          </div>
+         
          
             <button className='bg-secound w-full h-[52px] rounded-3xl text-white text-[18px] mt-[24px] mb-6 font-medium font-poppins flex items-center justify-center hover:scale-[1.03] duration-[.4s] '>continuee</button>
                {/* ..............alternative part .................... */}
