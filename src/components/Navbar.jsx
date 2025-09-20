@@ -62,9 +62,10 @@ const Navbar = () => {
     </nav>
 
     
+    
         {/* ............... resistration part............ */}
 
-        <div onClick={shadowremove} className={`flex items-center  w-full h-screen ${!showAccount?'invisible':'visible'} justify-around  fixed bg-[#0000005e] top-0 right-0 `}>
+        <div onClick={shadowremove} className={`flex items-center  w-full   h-screen ${!showAccount?'invisible':'visible'} justify-around  fixed bg-[#0000005e] top-0 right-0 `}>
        
           <div className={`bg-[#00000000] relative w-[790px] h-[440px] flex ${showlognresis? 'invisible':'ivisible'} items-center justify-between  rounded-4xl`}>
                   
