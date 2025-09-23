@@ -31,7 +31,7 @@ const Handlelog =()=>{
 
             </button>
              <label className='text-[14px] font-medium text-[#4B5563]  px-[190px]' htmlFor="">OR</label>
-             <Link className='flex justify-center bottom-0 text-[#0EA5E9]'><h4 className='text-[#4B5563]'> if your are a New user </h4> create an account </Link>
+             <Link to={''} className='flex justify-center bottom-0 text-[#0EA5E9]'><h4 className='text-[#4B5563]'> if your are a New user </h4> create an account </Link>
 
     </section>
        </form>

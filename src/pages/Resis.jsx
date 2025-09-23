@@ -5,6 +5,7 @@ import { Link } from 'react-router'
 import { GoEye } from "react-icons/go";
 import { IoMdEyeOff } from "react-icons/io";
 import { Bounce, toast } from 'react-toastify';
+import axios from 'axios';
 
 
 const Resis = () => {
@@ -30,6 +31,11 @@ const [Userbordernamerror, setUserbordernamerror]=useState('border-[#00000041]')
 const [passwoborderrderror, setpasswordbbotredererror]=useState('border-[#00000041]')
 const [repasswordbordererror, setrepasswordbortdererror]=useState('border-[#00000041]')
     
+// .........Loding spinner code or usestat...................//
+const [Loding, setloding] =useState(false)
+
+
+
 
   const Handlesubmit=(alu)=>{
       alu.preventDefault()
@@ -58,19 +64,20 @@ const [repasswordbordererror, setrepasswordbortdererror]=useState('border-[#0000
         setrepassworerror('Enter your comnform password')
         setrepasswordbortdererror('border-red-600')
        }
-       else{
-        toast.success(' your resistration succeeded!', {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-            transition: Bounce,
-});
-       }
+     else{
+         
+         setloding(true)
+      axios.post('https://api.escuelajs.co/api/v1/users/',{name:UserName,email:email,password:passoword, avatar:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.veryicon.com%2Ficons%2Fmiscellaneous%2Fuser-avatar%2Fuser-avatar-male-5.html&psig=AOvVaw3Y_slxGtLYW-RP2KUMcYnQ&ust=1758721587623000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCIC5oNCC748DFQAAAAAdAAAAABAE'})
+          .then((res)=>{setloding(false)
+
+            
+            console.log(res)
+          })
+          .catch((err)=>{console.log(err)})  
+    
+    
+    } 
+
   }
 
 
@@ -133,10 +140,15 @@ const [repasswordbordererror, setrepasswordbortdererror]=useState('border-[#0000
          </div>
          
          
+            {
+              Loding?
+              <button className='bg-secound w-full h-[52px] rounded-3xl text-white text-[18px] mt-[24px] mb-6 font-medium font-poppins flex items-center justify-center hover:scale-[1.03] duration-[.4s] '>    <svg viewBox="25 25 50 50"><circle r="20" cy="50" cx="50"></circle></svg></button>
+              :
             <button className='bg-secound w-full h-[52px] rounded-3xl text-white text-[18px] mt-[24px] mb-6 font-medium font-poppins flex items-center justify-center hover:scale-[1.03] duration-[.4s] '>continuee</button>
+            }
                {/* ..............alternative part .................... */}
              <label className='text-[14px] font-medium text-[#4B5563]  px-[190px]' htmlFor="">or</label>
-             <Link className='flex justify-center bottom-0 text-[#0EA5E9]'><h4 className='text-[#4B5563]'> already taken</h4>Login ?</Link>
+             <Link to={'Longing/'} className='flex justify-center bottom-0 text-[#0EA5E9]'><h4 className='text-[#4B5563]'> already taken</h4>Login ?</Link>
     </form>
     </section>
  
