@@ -5,6 +5,7 @@
   import { PiShoppingCartSimple } from "react-icons/pi";
   import AddToCart from './AddToCart';
   import { Link } from 'react-router';
+import { IoLogoGoogleplus } from "react-icons/io";
 
 const Navbar = () => {
 
@@ -88,7 +89,7 @@ const Navbar = () => {
                 </div>
            
            <div className="inputitems flex justify-center flex-col">
-           <input placeholder='Loging with google' className='w-[250px] border-3  bg-white rounded-[6px] h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
+           <input  placeholder='Loging with google'  className='w-[250px] border-3  bg-white rounded-[6px] h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
             <input placeholder='Loging with Facebook' className='w-[250px] border-3  bg-white rounded-[6px] h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
             <input placeholder='Loging with github' className='w-[250px] border-3  bg-white rounded-[6px] h-[30px] text-[14px] text-secound pl-[20px] outline-none mb-[10px]' type="text" />
            </div>

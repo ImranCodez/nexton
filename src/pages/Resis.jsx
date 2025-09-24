@@ -71,9 +71,13 @@ const [Loding, setloding] =useState(false)
           .then((res)=>{setloding(false)
 
             
-            console.log(res)
+          // ............sent otp...........//
+          axios.post('https://api.escuelajs.co/api/v1/users/is-available',{email})
+          .then((res)=>console.log('Otp',res))
+          .carch((error)=>console.log('Otp error',error))
           })
-          .catch((err)=>{console.log(err)})  
+          .catch((err)=>{console.log(err)
+             setloding(false)})  
     
     
     } 
@@ -142,7 +146,7 @@ const [Loding, setloding] =useState(false)
          
             {
               Loding?
-              <button className='bg-secound w-full h-[52px] rounded-3xl text-white text-[18px] mt-[24px] mb-6 font-medium font-poppins flex items-center justify-center hover:scale-[1.03] duration-[.4s] '>    <svg viewBox="25 25 50 50"><circle r="20" cy="50" cx="50"></circle></svg></button>
+              <button className='bg-secound w-full h-[52px] cursor-progress rounded-3xl text-white text-[18px] mt-[24px] mb-6 font-medium font-poppins flex items-center justify-center hover:scale-[1.03] duration-[.4s] '>    <svg viewBox="25 25 50 50"><circle r="20" cy="50" cx="50"></circle></svg></button>
               :
             <button className='bg-secound w-full h-[52px] rounded-3xl text-white text-[18px] mt-[24px] mb-6 font-medium font-poppins flex items-center justify-center hover:scale-[1.03] duration-[.4s] '>continuee</button>
             }
