@@ -89,7 +89,7 @@ const [Loding, setloding] =useState(false)
     <>
     
      
-     <section id='Resis' className='w-[440px] h-[550px] bg-[#Fff] top-0 right-[50%] absolute rounded-[10px] '>
+     <section id='Resis' className='w-[440px] h-[550px] border bg-[#Fff]  right-[30%] top-5 absolute rounded-[10px] '>
         <h1 className='text-[38px] text-secound font-semibold font-poppins mb-[60px] px-[144px] '>Resistration</h1>
       <form  onSubmit={Handlesubmit}  action=""> 
          {/* ..........UseName part............ */}
@@ -119,7 +119,7 @@ const [Loding, setloding] =useState(false)
           <input  onChange={(e)=>{setpassword(e.target.value),setpassworerror(''),setpasswordbbotredererror('')}} placeholder='Enter your password' className={`w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm  ${passwoborderrderror}`} type={showpass? 'text':'password'} />
          {
            showpass?
-           <GoEye onClick={()=>setshowpass(!showpass)}  className='bottom-[35px] right-5 absolute'/>
+           <GoEye onClick={()=>s(!showpass)}  className='bottom-[35px] right-5 absolute'/>
            :
             <IoMdEyeOff onClick={()=>setshowpass(!showpass)}  className='bottom-[35px] right-5 absolute'/>
          }

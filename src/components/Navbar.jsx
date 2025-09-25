@@ -105,13 +105,10 @@ const Navbar = () => {
               </div>
         </label>
            {/* ..............uiverse code end................. */}
-          {/* <IoMdClose className='text-secound absolute right-[-50px] w-[60] h-[40px] text-4xl bg-[#88888870] '/> */}
       </div>
      
     </div>
-
-    {/* <section onClick={handlecloss} className={`top-0 fixed z-50 w-full h-screen backdrop-blur-xs bg-[#00000000] `}>
-    </section> */}
+=
 
 
 

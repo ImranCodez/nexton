@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { CgPassword } from 'react-icons/cg'
 import { Link } from 'react-router'
+import { IoMdEyeOff } from "react-icons/io";
+import { GoEye } from "react-icons/go";
 
 const Longing = () => {
 
@@ -19,6 +21,11 @@ const HndleLogin =()=>{
    }
 }
 
+
+
+const [eyesing ,seteyesign]=useState(false)
+const [reeyesign,setreteyesign]  =useState(false)
+      console.log(reeyesign)
 
   return (
     <>
@@ -41,22 +48,35 @@ const HndleLogin =()=>{
       <div className='relative'> <p className='text-base font-normal absolute top-[-25px] left-14 font-poppins text-red-600 pl-10'>{FoRmdata.passwordError}</p></div>         
 
 
-        <input onChange={(e)=>setFormdata((prev)=>({... prev,pass:e.target.value,passwordError:''}))} placeholder='Enter your password' className='w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm border-[#0000001c]  ' type="password" />
-          
+      <div className='relative'>
+          <input onChange={(e)=>setFormdata((prev)=>({... prev,pass:e.target.value,passwordError:''}))} placeholder='Enter your password' className='w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm border-[#0000001c]  ' type={ eyesing? "text":"password"} />
+          {
+                     eyesing?
+                     <GoEye onClick={()=>seteyesign(!eyesing)}  className='bottom-[15px] right-5 absolute'/>
+                     :
+                      <IoMdEyeOff onClick={()=>seteyesign(!eyesing)}  className='bottom-[15px] right-5 absolute'/>
+                   }
+      </div>
           {/* ...............conform passwpord..................... */}
            <br />
           <br />
           <label htmlFor=""className='text-secound font-semibold text-[20px] pl-[12px]'>conform password</label>
-        <br />
-        <div className='relative'> <p className='text-base font-normal absolute top-[-25px] left-36 font-poppins text-red-600 pl-10'>{FoRmdata.CorforpassError}</p></div>         
-
-        <input onChange={(e)=>setFormdata((prev)=>({... prev,repassword:e.target.value,CorforpassError:''}))} placeholder='Enter your password' className='w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm border-[#0000001c]  ' type="password" />
-          
+           <br/>
+             <div className='relative'> 
+           <div className='relative'> <p className='text-base font-normal absolute top-[-25px] left-36 font-poppins text-red-600 pl-10'>{FoRmdata.CorforpassError}</p></div>         
+           <input onChange={(e)=>setFormdata((prev)=>({... prev,repassword:e.target.value,CorforpassError:''}))} placeholder='Enter your password' className='w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm border-[#0000001c]  ' type="password" />
+              {
+                     eyesing?
+                     <GoEye onClick={()=>setreteyesign(!reeyesign)}  className='bottom-[15px] right-5 absolute'/>
+                     :
+                     <IoMdEyeOff onClick={()=>setreteyesign(!reeyesign)}  className='bottom-[15px] right-5 absolute'/>
+                   }
+           </div>
             <button onClick={HndleLogin} className='bg-secound w-full h-[52px] rounded-3xl text-white text-[18px] mt-[24px] mb-6 font-medium font-poppins flex items-center justify-center hover:scale-[1.03] duration-[.4s] '>continuee
 
             </button>
              <label className='text-[14px] font-medium text-[#4B5563]  px-[190px]' htmlFor="">OR</label>
-             <Link to={''} className='flex justify-center bottom-0 text-[#0EA5E9]'><h4 className='text-[#4B5563]'> if your are a New user </h4> create an account </Link>
+             <Link to={'/Resis'} className='flex justify-center bottom-0 text-[#0EA5E9]'><h4 className='text-[#4B5563]'> if your are a New user </h4> create an account </Link>
 
     </section>
   
