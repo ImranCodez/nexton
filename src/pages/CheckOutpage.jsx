@@ -1,12 +1,49 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import BredCrum from '../components/common/BredCrum'
 import { CgProfile } from "react-icons/cg";
 import { GrDirections } from "react-icons/gr";
 import Checkout from '../assets/images/Checkout.png'
 import { BsArrowsAngleExpand } from "react-icons/bs";
+import axios from 'axios';
+import { MdDelete } from "react-icons/md";
+
 
 
 const CheckOutpage = () => {
+
+    const [addvalue ,setaddvalue]  =useState(1)
+    const removehandle =()=>{
+
+      if(addvalue >1){
+        setaddvalue(addvalue - 1 )
+      }
+    }
+
+    // ...........data fecth......................//
+      const [product, setproduct] = useState([]);
+      const localids =JSON.parse(localStorage.getItem('productId')) 
+    
+    useEffect(() => {
+       // ...............localstorage id .............//
+        
+       axios
+          .get(`https://api.escuelajs.co/api/v1/products`)
+          .then((res) => {
+            setproduct(res.data)
+        
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }, []);
+       
+    
+          const Cartprduct=product?.filter((item)=>{
+             return localids.includes(item.id)  
+      
+          })
+       console.log(Cartprduct)
+
   return (
     <>
     <div className="container">
@@ -116,46 +153,39 @@ const CheckOutpage = () => {
               </div>
             </div>
         </div>
-        {/* ......................left side.................. */}
+        {/* ......................right side.................. */}
           <div className='w-[618px] h-[604px] border-y-orange-950 '>
             <h2 className='text-[24px]'>Order summary</h2>
-            <div className='w-full h-[132px] flex justify-between items-center py-[24px] border-b border-[#00000030]'>
-              <div className='w-[96px] h-[108px]'>
-                <img src={Checkout} alt="checkOutImage" />
-              </div>
-              <div className='w-[498px] h-[108px]'>
-                <h2 className='text-[16px] text-secound font-semibold font-poppins '>Black Automatic Watch</h2>
-                <p className='flex mt-0.5 text-base text-primary'><BsArrowsAngleExpand/>One size</p>
-              <div className='w-[110px] bg-[rgb(229,231,235)] h-10 rounded-3xl flex justify-between px-2 items-center mt-5'>
-                <button className='w-7 h-7 rounded-full bg-amber-50 text-[16px] '>+</button>
-                     <p>1</p>
-                <button className='w-7 h-7 rounded-full bg-amber-50 text-[16px] '>-</button>
-              </div>
-              </div>
-              <div className='w-[61px] h-[108px] '>
-                 <h1 className='text-[16px] text-secoundm font-semibold font-poppins'>$169.99</h1>
-                 <p className='text-base text-primary font-normal font-poppins' >$199.99</p>
-              </div>
-            </div>
+              {/* ...............single produc..........// */}
+
+
+              {
+                Cartprduct.map((items)=>(
+
                 <div className='w-full h-[132px] flex justify-between items-center py-[24px] border-b border-[#00000030]'>
               <div className='w-[96px] h-[108px]'>
-                <img src={Checkout} alt="checkOutImage" />
+                <img src={items.images} alt="checkOutImage"/>
               </div>
               <div className='w-[498px] h-[108px]'>
-                <h2 className='text-[16px] text-secound font-semibold font-poppins '>Black Automatic Watch</h2>
+                <h2 className='text-[16px] text-secound font-semibold font-poppins '>{items.title}</h2>
                 <p className='flex mt-0.5 text-base text-primary'><BsArrowsAngleExpand/>One size</p>
               <div className='w-[110px] bg-[rgb(229,231,235)] h-10 rounded-3xl flex justify-between px-2 items-center mt-5'>
-                <button className='w-7 h-7 rounded-full bg-amber-50 text-[16px] '>+</button>
-                     <p>1</p>
-                <button className='w-7 h-7 rounded-full bg-amber-50 text-[16px] '>-</button>
+                <button onClick={()=>setaddvalue(addvalue + 1)} className='w-7 h-7 rounded-full bg-amber-50 text-[16px] '>+</button>
+                     <p>{addvalue}</p>
+                <button onClick={removehandle} className='w-7 h-7 rounded-full bg-amber-50 text-[16px] '>-</button>
               </div>
               </div>
               <div className='w-[61px] h-[108px] '>
-                 <h1 className='text-[16px] text-secoundm font-semibold font-poppins'>$169.99</h1>
+                  <div className='w-[25px] h-[25px] bg-amber-600 flex justify-center relative items-center group rounded-2xl text-5xl hover:bg-red-600 duration-[.4s] hover:scale-[1.1]'> <MdDelete/>
+                     <span className='absolute top-[-25px] right-[-200px] text-base group-hover:right-1 duration-[.4s] w-[100px] bg-black text-white text-center rounded-2xl'>Delete Now</span>
+                    </div>
+                 <h1 className='text-[16px] text-secoundm font-semibold font-poppins'>{items.price}</h1>
                  <p className='text-base text-primary font-normal font-poppins' >$199.99</p>
               </div>
               
             </div>
+                ))
+              }
             <div className='w-full h-[160px]  '>
                     <div className='flex justify-between items-center mt-6'>
                       <p className='text-[16px] text-primary font-normal font-poppins' >Subtotal</p>

@@ -64,9 +64,9 @@ const [reeyesign,setreteyesign]  =useState(false)
            <br/>
              <div className='relative'> 
            <div className='relative'> <p className='text-base font-normal absolute top-[-25px] left-36 font-poppins text-red-600 pl-10'>{FoRmdata.CorforpassError}</p></div>         
-           <input onChange={(e)=>setFormdata((prev)=>({... prev,repassword:e.target.value,CorforpassError:''}))} placeholder='Enter your password' className='w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm border-[#0000001c]  ' type="password" />
+           <input onChange={(e)=>setFormdata((prev)=>({... prev,repassword:e.target.value,CorforpassError:''}))} placeholder='Enter your password' className='w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm border-[#0000001c]  ' type={reeyesign? 'text':'password'} />
               {
-                     eyesing?
+                     reeyesign?
                      <GoEye onClick={()=>setreteyesign(!reeyesign)}  className='bottom-[15px] right-5 absolute'/>
                      :
                      <IoMdEyeOff onClick={()=>setreteyesign(!reeyesign)}  className='bottom-[15px] right-5 absolute'/>
