@@ -34,11 +34,11 @@ circle {
  animation: dash4 1.5s ease-in-out infinite;
 }
 
-@keyframes rotate4 {
+/* @keyframes rotate4 {
  100% {
   transform: rotate(360deg);
  }
-}
+} */
 
 @keyframes dash4 {
  0% {
