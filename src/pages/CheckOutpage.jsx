@@ -222,10 +222,6 @@ const CheckOutpage = () => {
         </div>
     </div>
     
-    
-    
-    
-    
     </>
   )
 }
