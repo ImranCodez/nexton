@@ -211,7 +211,7 @@ const CheckOutpage = () => {
                       <p className='text-[16px] text-primary font-normal font-poppins' >Tax estimate</p>
                       <p className='text-[16px] text-primary font-normal font-poppins' >$169.99</p>
                     </div>
-                     <div className='flex justify-between items-center mt-6'>
+                     <div className='flex  justify-between items-center mt-6'>
                       <h2 className='text-[16px] text-secound font-semibold font-poppins' >Order total</h2>
                       <h2 className='text-[16px] text-secound font-semibold font-poppins' >$169.99</h2>
                     </div>
