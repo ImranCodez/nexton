@@ -12,24 +12,20 @@ import { MdDelete } from "react-icons/md";
 const CheckOutpage = () => {
 
     const [addvalue ,setaddvalue]  =useState(1)
-    const removehandle =()=>{
-
-      if(addvalue >1){
-        setaddvalue(addvalue - 1 )
-      }
-    }
+   
 
     // ...........data fecth......................//
-      
 
         const [CartPorduct, setCartproduct]= useState([])
 
+        
+           console.log(CartPorduct)
 
             
-      
+        const localids =JSON.parse(localStorage.getItem('productId')) 
+      console.log(localids)
 
 
-      const localids =JSON.parse(localStorage.getItem('productId')) 
          
     useEffect(() => {
        // ...............localstorage id .............//
@@ -37,25 +33,32 @@ const CheckOutpage = () => {
        axios
           .get(`https://api.escuelajs.co/api/v1/products`)
           .then((res) => {
-           const Cardata= res.data.filter((item)=>{ return localids.includes(item.id)} )
-                   
-                 console.log(Cardata)
-                    const WithQyt = CartPorduct.map((items)=>{ return {...items,qty:1}})
-             console.log(WithQyt) 
-             
+          
+            const Cardata= res.data.filter((item)=>{{ return localids.includes(item.id)}} )
+            setCartproduct(Cardata)
           })
           .catch((err) => {
             console.log(err);
           });
-      }, []);
+        }, []);
+        // const WithQyt = CartPorduct.map((items)=>{ return {...items,qty:1}})
+        // console.log(WithQyt) 
        
     
-      //     const Cartprduct=product?.filter((item)=>{
-      //        return localids.includes(item.id)  
+          // const Cartprduct=product?.filter((item)=>{
+          //    return localids.includes(item.id)  
       
-      //     })
-      //  console.log(Cartprduct)
+          // })
+      
 
+const removehandle = (alu)=>{
+ 
+}
+
+      const  handleadd=(aluid)=>{
+      
+
+      }
   return (
     <>
     <div className="container">
@@ -173,7 +176,7 @@ const CheckOutpage = () => {
 
               {
                 CartPorduct.map((items)=>(
-
+                      
                 <div key={items.id} className='w-full h-[132px] flex justify-between items-center py-[24px] border-b border-[#00000030] relative'>
               <div className='w-[96px] h-[108px]'>
                 <img src={items.images} alt="checkOutImage"/>
@@ -182,9 +185,9 @@ const CheckOutpage = () => {
                 <h2 className='text-[16px] text-secound font-semibold font-poppins pl-2 '>{items.title}</h2>
                 <p className='flex mt-0.5 text-base text-primary'><BsArrowsAngleExpand/>One size</p>
               <div className='w-[110px] bg-[rgb(229,231,235)] h-10 rounded-3xl flex justify-between px-2 items-center ml-2.5 mt-5'>
-                <button onClick={''} className='w-7 h-7 rounded-full bg-amber-50 text-[16px]  '>+</button>
-                     <p>{items.qty}</p>
-                <button onClick={''} className='w-7 h-7 rounded-full bg-amber-50 text-[16px] '>-</button>
+                <button onClick={()=>handleadd(items.id)} className='w-7 h-7 rounded-full bg-amber-50 text-[16px]  '>+</button>
+                     <p>{items.qty}$</p>
+                <button onClick={()=>removehandle(items.qty)} className='w-7 h-7 rounded-full bg-amber-50 text-[16px] '>-</button>
               </div>
                   <div className='w-[25px] absolute top-0 right-0 h-[25px] bg-amber-600 flex justify-center  items-center group rounded-2xl text-5xl hover:bg-red-600 duration-[.4s] hover:scale-[1.1]'> <MdDelete/>
                      <span className='absolute top-[-25px] right-[-200px] text-base group-hover:right-1 duration-[.4s] w-[100px] bg-black text-white text-center rounded-2xl'>Delete Now</span>

@@ -9,7 +9,8 @@ import BredCrum from "./common/BredCrum";
 
 const Reco = () => {
   const [product, setproduct] = useState([]);
-  const [product2, setproduct2] = useState([]);
+  
+
 
   useEffect(() => {
     axios

@@ -6,7 +6,7 @@ import axios from "axios";
 
 
 
-const AddToCart = ({closeCart}) => {
+const AddToCart= ({closeCart}) => {
 
 const [close,setclose] = useState([])
 
@@ -18,8 +18,8 @@ const handleback =()=>{
 
 // ................cart data ...................//
   const [product, setproduct] = useState([]);
-  const localids =JSON.parse(localStorage.getItem('productId')) 
-
+  console.log(product)
+  const localids =JSON.parse(localStorage.getItem('productId'))  
 useEffect(() => {
    // ...............localstorage id .............//
     
@@ -34,11 +34,12 @@ useEffect(() => {
       });
   }, []);
    
-
-      const Cartprduct=product?.filter((item)=>{
-         return localids.includes(item.id)  
-  
-      })
+  const Cartprduct=product.filter((itemes)=>{
+    return localids.includes(itemes.id)  
+     
+    
+  })
+    console.log(Cartprduct)
       // ................Reduce method  2 jinish niya kaj kore first is function and secound is initial number..............//
       const toalamount=Cartprduct?.reduce((sum,item)=>{
         return sum + item.price

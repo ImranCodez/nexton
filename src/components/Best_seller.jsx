@@ -7,8 +7,7 @@ const Best_seller = () => {
 
       const [mostsell,setmostsell] =useState([])
 
-         console.log(mostsell)
-
+     
       useEffect(()=>{
       axios.get('https://dummyjson.com/products')    
       .then((res2)=>(setmostsell(res2.data.products)))

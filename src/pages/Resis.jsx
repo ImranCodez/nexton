@@ -90,7 +90,7 @@ const [Loding, setloding] =useState(false)
     
      
      <section id='Resis' className='w-[440px] h-[550px] border bg-[#Fff]  right-[30%] top-5 absolute rounded-[10px] '>
-        <h1 className='text-[38px] text-secound font-semibold font-poppins mb-[60px] px-[144px] '>Resistration</h1>
+        <h1 className='text-[38px] text-secound font-semibold font-poppins mb-[60px] px-[114px] '>Resistration</h1>
       <form  onSubmit={Handlesubmit}  action=""> 
          {/* ..........UseName part............ */}
        <div className='relative'>
@@ -119,7 +119,7 @@ const [Loding, setloding] =useState(false)
           <input  onChange={(e)=>{setpassword(e.target.value),setpassworerror(''),setpasswordbbotredererror('')}} placeholder='Enter your password' className={`w-full pl-[10px] ronded-[12px] h-[43px] outline-0 border rounded-sm  ${passwoborderrderror}`} type={showpass? 'text':'password'} />
          {
            showpass?
-           <GoEye onClick={()=>s(!showpass)}  className='bottom-[35px] right-5 absolute'/>
+           <GoEye onClick={()=>setshowpass(!showpass)}  className='bottom-[35px] right-5 absolute'/>
            :
             <IoMdEyeOff onClick={()=>setshowpass(!showpass)}  className='bottom-[35px] right-5 absolute'/>
          }
@@ -142,17 +142,15 @@ const [Loding, setloding] =useState(false)
          <br />
          <br />
          </div>
-         
-         
             {
               Loding?
               <button className='bg-secound w-full h-[52px] cursor-progress rounded-3xl text-white text-[18px] mt-[24px] mb-6 font-medium font-poppins flex items-center justify-center hover:scale-[1.03] duration-[.4s] '>    <svg viewBox="25 25 50 50"><circle r="20" cy="50" cx="50"></circle></svg></button>
               :
-            <button className='bg-secound w-full h-[52px] rounded-3xl text-white text-[18px] mt-[24px] mb-6 font-medium font-poppins flex items-center justify-center hover:scale-[1.03] duration-[.4s] '>continuee</button>
+            <button className='bg-secound w-full h-[52px] rounded-3xl text-white text-[18px] mt-[24px] mb-6 font-medium font-poppins flex items-center justify-center hover:scale-[1.03] duration-[.4s] '>continue</button>
             }
                {/* ..............alternative part .................... */}
              <label className='text-[14px] font-medium text-[#4B5563]  px-[190px]' htmlFor="">or</label>
-             <Link to={'Longing/'} className='flex justify-center bottom-0 text-[#0EA5E9]'><h4 className='text-[#4B5563]'> already taken</h4>Login ?</Link>
+             <Link to={'Longing/'} className='flex justify-center bottom-0 text-[#0EA5E9]'><h4  className='text-[#4B5563]'> already taken</h4>Login ?</Link>
     </form>
     </section>
  
